@@ -1,0 +1,2337 @@
+{
+  "chapters": [
+    {
+      "chapterName": "《HarmonyOS介绍》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "\"一次开发，多端部署\"指的是一个工程，一次开发上架，多端按需部署。为了实现这一目的，HarmonyOS提供了多端开发环境，多端开发能力以及多端分发机制。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "\"一次开发，多端部署\"指的是一个工程，一次开发上架，多端按需部署。目的是为了支撑开发者高效地开发多种终端设备上的应用。为了实现这一目的，HarmonyOS提供了几个核心能力，包括多端开发环境，多端开发能力以及多端分发机制。"
+            },
+            {
+              "id": 2,
+              "question": "《鸿蒙生态应用开发白皮书》全面阐释了鸿蒙生态下应用开发核心理念、关键能力以及创新体验，旨在帮助开发者快速、准确、全面的了解鸿蒙开发套件给开发者提供的能力全景和未来的愿景。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "《鸿蒙生态应用开发白皮书》全面阐释了鸿蒙生态下应用开发核心理念、关键能力以及创新体验，旨在帮助开发者快速、准确、全面的了解鸿蒙开发套件给开发者提供的能力全景和未来的愿景。"
+            },
+            {
+              "id": 3,
+              "question": "HUAWEI DevEco Studio是面向HarmonyOS生态的集成开发环境，提供了一站式的HarmonyOS生态应用开发能力。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "HUAWEI DevEco Studio是面向HarmonyOS生态的集成开发环境，提供了一站式的HarmonyOS生态应用开发能力。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下列哪个是面向HarmonyOS生态的集成开发环境。",
+              "options": [
+                "A.HUAWEI DevEco Studio",
+                "B.HUAWEI DevEco Hvigor",
+                "C.HUAWEI AppGallery Connect",
+                "D.HUAWEI DevEco Profiler"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "HUAWEI DevEco Studio是面向HarmonyOS生态的集成开发环境，提供了一站式的HarmonyOS生态应用开发能力。"
+            },
+            {
+              "id": 2,
+              "question": "如果开发者在应用版本的基础上，想要提供多种服务给用户，开发者选择开发场景的最优选是？",
+              "options": [
+                "A.独立开发一个应用",
+                "B.开发多个元服务，按需组合为一个复杂的应用",
+                "C.独立开发一个元服务",
+                "D.同时开发应用和多个元服务"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "元服务与APP之间的关系。解析: 元服务具有免安装、包大小有限制、即用即走、轻量化等特征。想要提供多种服务给用户，可选择开发多个元服务，按需组合为一个复杂的应用。"
+            },
+            {
+              "id": 3,
+              "question": "当用户希望能够在多个设备间来回切换、完成多个任务，开发者可以使用以下哪个核心能力，以便应用不间断地给用户提供服务的能力。",
+              "options": [
+                "A.统一生态",
+                "B.可分可合",
+                "C.自由流转",
+                "D.原生智能"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "HarmonyOS提供了自由流转的能力，使得开发者可以方便地开发出跨越多个设备的应用，用户也能够方便地使用这些功能去学习"
+            },
+            {
+              "id": 4,
+              "question": "当您希望获取到最全面、最详细的功能描述、参数说明和权限信息时，应该从（）寻找？",
+              "options": [
+                "A.Sample",
+                "B.FAQ",
+                "C.API参考",
+                "D.Codelabs"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "API参考具有清晰具体的\"参数说明\"，便于开发者掌握使用方法。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下列哪些选项属于HarmonyOS三大技术理念。",
+              "options": [
+                "A.一次开发，多端部署",
+                "B.可分可合，自由流转",
+                "C.统一生态，原生智能",
+                "D.跨端迁移，多端协同"
+              ],
+              "correctAnswer": ["A", "B", "C"],
+              "knowledge": "HarmonyOS的技术理念。解析：HarmonyOS结合移动生态发展的趋势，提出了三大技术理念：一次开发，多端部署；可分可合，自由流转；统一生态，原生智能。"
+            },
+            {
+              "id": 2,
+              "question": "用户使用应用的情境发生变化时（例如从室内走到户外、从办公室到车上等），之前使用的设备可能已经不适合继续当前的任务，或者周围有更合适的设备，此时，可以选择使用新的设备来继续当前的任务。以下哪些场景适合使用跨端迁移能力？",
+              "options": [
+                "A.在外时手机上编辑邮件，到公司后在2in1设备上继续编辑",
+                "B.在外时手机玩游戏，到家后希望获取更好的视觉体验，在平板上继续玩",
+                "C.在家里智慧屏上看视频，当下需要出门时，可以手机上继续观看",
+                "D.手机视频通话中，到家后家中有智慧屏，可以更沉浸地视频聊天"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "跨端迁移。解析：在用户使用设备的过程中，当使用情境发生变化时（例如从室内走到户外或者周围有更合适的设备等），之前使用的设备可能已经不适合继续当前的任务，此时，用户可以选择新的设备来继续当前的任务，原设备可按需决定是否退出任务，这就是跨端迁移场景。从跨端迁移概念可知，上述选项场景均属于跨端迁移场景。"
+            },
+            {
+              "id": 3,
+              "question": "下列哪些说法是正确的。",
+              "options": [
+                "A.HUAWEI DevEco Studio 提供了设备模拟的能力，解决HarmonyOS生态应用、元服务开发过程中遇到的真机设备不足、无分布式应用调试环境等问题，为开发者提供低成本、易获取的调测验证环境",
+                "B.为了降低性能调优技术难度，HUAWEI DevEco Studio推出了场景化调优工具 DevEco Profiler",
+                "C.HUAWEI DevEco Studio提供了一系列命令行工具，辅助开发者更高效的管理 SDK、设备，提升调试、调优的效率",
+                "D.HUAWEI DevEco Studio是面向HarmonyOS生态的集成开发环境，提供了一站式的HarmonyOS生态应用开发能力"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "HUAWEI DevEco Studio是面向HarmonyOS生态的集成开发环境，提供了一站式的HarmonyOS生态应用开发能力。HUAWEI DevEco Studio是面向全场景多设备提供的一站式开发平台，支持多端双向预览、分布式调优、分布式调试、超级终端模拟、低代码可视化开发等能力，帮助开发者降低成本、提升效率、提高质量。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《DevEco Studio的使用》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "如果代码中涉及到一些网络、数据库、传感器等功能的开发，均可使用预览器进行预览。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "预览器的使用。解析：预览器只支持对页面的预览，如果代码中涉及到一些网络、数据库、传感器等功能的开发，则可以使用模拟器或者真机进行调试。"
+            },
+            {
+              "id": 2,
+              "question": "module.json5文件中的deviceTypes字段中，配置了phone，tablet，PC/2in1等多种设备类型，才能进行多设备预览。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "通过deviceTypes字段进行多设备预览。解析：只有确保在module.json5文件中的deviceTypes字段中，有多种设备，才能进行多设备预览。"
+            },
+            {
+              "id": 3,
+              "question": "DevEco Studio支持代码自动补全、自动导包等能力。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "DevEco Studio支持的能力。解析：在我们开发工程时，可以使用DevEco Studio的自动补全、自动导包等能力快速编辑代码。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "用哪一种装饰器修饰的组件可作为页面入口组件：",
+              "options": [
+                "A. @Component",
+                "B. @Entry",
+                "C. @Preview",
+                "D. @Builder"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "装饰器的使用。解析：@Component表示自定义组件，@Entry表示该自定义组件为入口组件，@Preview表示组件可以在预览器单独预览，@Builder是特殊的封装UI描述的方法，用于细粒度的封装和复用UI描述。"
+            },
+            {
+              "id": 2,
+              "question": "使用多端设备预览器功能，查看不同设备的运行效果，需要配置如下哪个字段：",
+              "options": [
+                "A. abilities",
+                "B. skills",
+                "C. deviceTypes",
+                "D. routerMap"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "多端设备预览器的使用。解析：A选项abilities用于标识当前Module中UIAbility的配置信息。B选项skills用于标识当前UIAbility组件或ExtensionAbility组件能够接收的Want特征集。C选项deviceTypes用于标识当前Module可以运行在哪类设备上。D选项routerMap用于标识模块配置的路由表的路径。"
+            },
+            {
+              "id": 3,
+              "question": "使用下面哪个hdc命令可以查看设备链接信息：",
+              "options": [
+                "A. hdc hilog",
+                "B. hdc list targets",
+                "C. hdc shell",
+                "D. hdc -v"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "hdc命令。解析：hdc hilog：查看日志。hdc list targets：查看设备链接信息。hdc shell：进入命令行交互模式。hdc -v：查看hdc工具版本号。"
+            },
+            {
+              "id": 4,
+              "question": "组件预览通过在组件前添加下面哪个注解：",
+              "options": [
+                "A. @Component",
+                "B. @Entry",
+                "C. @Preview",
+                "D. @Builder"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "@Preview。解析：组件预览通过在组件前添加注解@Preview实现。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于预览器的使用，以下哪些说法是正确的：",
+              "options": [
+                "A. 在开发界面UI代码过程中，如果添加或删除了UI组件，您只需Ctrl+S进行保存，然后预览器就会立即刷新预览结果。",
+                "B. 在预览器界面，可以在预览器中操作应用/服务的界面交互动作，如单击、跳转、滑动等，与应用/服务运行在真机设备上的界面交互体验一致。",
+                "C. 组件预览通过在组件前添加注解@Preview实现。",
+                "D. 页面预览通过在工程的ets文件头部添加注解@Entry实现。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "如以上全部正确。"
+            },
+            {
+              "id": 2,
+              "question": "DevEco Studio代码编辑支持下面哪些能力：",
+              "options": [
+                "A. 代码自动补齐。",
+                "B. 实时检查。",
+                "C. 跨语言跳转。",
+                "D. 代码引用查找。",
+                "E. 快速查阅API接口及组件参考文档。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D", "E"],
+              "knowledge": "如以上全部正确。"
+            },
+            {
+              "id": 3,
+              "question": "DevEco Studio支持使用多种语言进行应用/服务的开发，包括ArkTS、JS和C/C++。在编写应用/服务阶段，可以通过以下哪些方法提升编码效率：",
+              "options": [
+                "A. 提供代码的智能补齐能力，编辑器工具会分析上下文并理解项目内容，并根据输入的内容，提示可补齐的类、方法、字段和关键字的名称等。",
+                "B. 在编辑器中调用ArkTS API接口或ArkTS/JS组件时，支持在编辑器中快速、精准调取出对应的参考文档。",
+                "C. 代码格式化功能可以帮助您快速的调整和规范代码格式，提升代码的美观度和可读性。",
+                "D. 如果输入的语法不符合编码规范，或者出现语义语法错误，编辑器会显示错误或警告。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "如以上全部正确。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《ArkTS语法介绍》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "ArkTS中使用const声明常量。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "ArkTS中声明常量的关键字。解析：ArkTS中使用let声明变量，使用const声明常量。"
+            },
+            {
+              "id": 2,
+              "question": "允许在容器组件内使用if/else条件渲染语句构建不同的子组件。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "if/else条件渲染的使用。解析：允许在容器组件内使用，通过条件渲染语句构建不同的子组件。"
+            },
+            {
+              "id": 3,
+              "question": "ArkTS是HarmonyOS生态应用的开发语言，使用 .ets 作为ArkTS语言源码文件后缀。它在保持TypeScript（简称TS）基本语法风格的基础上，对TS的动态类型特性施加更严格的约束。同时提供了声明式UI、状态管理等相应的能力，让开发者以更简洁、更自然的方式开发高性能应用。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "ArkTS的基本概念。解析：ArkTS是HarmonyOS生态应用的开发语言，使用 .ets 作为 ArkTS 语言源码文件后缀。它在保持 TypeScript（简称 TS）基本语法风格的基础上，对 TS 的动态类型特性施加更严格的约束，引入静态类型。同时提供了声明式 UI、状态管理等相应的能力，让开发者以更简洁、更自然的方式开发高性能应用。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下面属于ArkTS中正确使用变量声明的语句是？",
+              "options": [
+                "A. int a = 10;",
+                "B. var a = 10;",
+                "C. let a: number = 10;",
+                "D. number a = 10;"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "变量的声明。解析：ArkTS变量声明使用let。"
+            },
+            {
+              "id": 2,
+              "question": "下面属于ArkTS函数声明的语句的是？",
+              "options": [
+                "A. func printInfo(){};",
+                "B. def printInfo();",
+                "C. void printInfo(){};",
+                "D. function printInfo() {};"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "ArkTS中函数的声明。解析：ArkTS函数声明关键字为function。"
+            },
+            {
+              "id": 3,
+              "question": "class类中的可见性修饰符不包括下面哪一个。",
+              "options": [
+                "A. protected",
+                "B. public",
+                "C. protect",
+                "D. private"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "class可见性修饰符。解析：可见性修饰符包括：private、protected和public，默认可见性为public。"
+            },
+            {
+              "id": 4,
+              "question": "下列关于if/else条件渲染说法错误的是？",
+              "options": [
+                "A. if、else if后跟随的条件语句不可以使用状态变量",
+                "B. 允许在容器组件内使用，通过条件渲染语句构建不同的子组件",
+                "C. 当父组件和子组件之间存在一个或多个if语句时，必须遵守父组件关于子组件使用的规则",
+                "D. 支持if、else和else if语句"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "if/else条件渲染。解析：if、else if后跟随的条件语句可以使用状态变量。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下面示例中会导致编译报错的有？",
+              "options": [
+                "A. let x: number = null;",
+                "B. let x: number | null = null;",
+                "C. let y: string = null;",
+                "D. let y: string = 100;"
+              ],
+              "correctAnswer": ["A", "C", "D"],
+              "knowledge": "变量的声明与赋值。解析：默认情况下，ArkTS中的所有类型都是不可为空的，因此类型的值不能为空。可以为空值的变量定义为联合类型T | null。"
+            },
+            {
+              "id": 2,
+              "question": "下面属于ArkTS基础类型的是？",
+              "options": [
+                "A. string",
+                "B. boolean",
+                "C. number",
+                "D. Object"
+              ],
+              "correctAnswer": ["A", "B", "C"],
+              "knowledge": "基础类型、引用类型。解析：ArkTS基础类型包括string、boolean、number，Object属于引用类型。"
+            },
+            {
+              "id": 3,
+              "question": "下面哪些属于属性方法？",
+              "options": [
+                "A. fontSize()",
+                "B. onClick()",
+                "C. width()",
+                "D. height()"
+              ],
+              "correctAnswer": ["A", "C", "D"],
+              "knowledge": "属性方法、事件方法。解析：onClick()属于事件方法，fontSize()、width()、height()属于用于设置组件样式的属性方法。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《应用程序框架基础》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "在基于Stage模型开发的应用项目中都存在一个app.json5配置文件、以及一个或多个module.json5配置文件。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "在基于Stage模型开发的应用项目中都存在一个app.json5配置文件、以及一个或多个module.json5配置文件。"
+            },
+            {
+              "id": 2,
+              "question": "一个应用只可以包含一个UIAbility组件。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "一个应用可以包含一个或多个UIAbility组件。"
+            },
+            {
+              "id": 3,
+              "question": "Background状态在UIAbility实例销毁时触发。可以在onDestroy()回调中进行系统资源的释放、数据的保存等操作。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "Background状态在UIAbility实例切换至后台时触发，对应于onBackground()回调。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于module.json5配置文件的标签描述，以下哪个是错误的？",
+              "options": [
+                "A. pages标签标识当前Module的配置的应用环境变量",
+                "B. deviceTypes标签标识当前应用可以运行在哪类设备上",
+                "C. abilities标签标识当前Module中UIAbility的配置信息",
+                "D. requestPermissions标签标识当前应用运行时需要向系统申请的权限集合"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "module.json5配置文件中的pages标签标识当前Module的profile资源，用于列举每个页面的信息。"
+            },
+            {
+              "id": 2,
+              "question": "在UIAbility实例销毁时触发什么状态？",
+              "options": [
+                "A. Background",
+                "B. Foreground",
+                "C. Destroy",
+                "D. Create"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "Destroy状态在UIAbility实例销毁时触发。"
+            },
+            {
+              "id": 3,
+              "question": "UIAbility实例创建完成时触发的回调：",
+              "options": [
+                "A. onCreate()",
+                "B. onForeground()",
+                "C. onBackground()",
+                "D. onDestroy()"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "Create状态为在应用加载过程中，UIAbility实例创建完成时触发，系统会调用onCreate()回调。可以在该回调中进行应用初始化操作，例如变量定义、资源加载等，用于后续的UI展示。"
+            },
+            {
+              "id": 4,
+              "question": "如果需要定义某个Module可以在手机、平板和车机上运行，则修改以下哪个文件？",
+              "options": [
+                "A. app.json5",
+                "B. module.json5",
+                "C. oh-package.json5",
+                "D. oh-package-lock.json5"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "module.json5配置文件中的deviceTypes标识当前Module可以运行在哪类设备上，例如：手机、平板、折叠机、车机等。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "UIAbility的生命周期有哪几个状态？",
+              "options": [
+                "A. Create",
+                "B. WindowStageCreate",
+                "C. Foreground",
+                "D. Background",
+                "E. WindowStageDestory"
+              ],
+              "correctAnswer": ["A", "C", "D"],
+              "knowledge": "UIAbility的生命周期有Create、Foreground、Background和Destroy。"
+            },
+            {
+              "id": 2,
+              "question": "Stage模型提供了AbilityStage、WindowStage等类作为应用组件和Window窗口的“舞台”，其设计基于哪些出发点：",
+              "options": [
+                "A. 为复杂应用而设计",
+                "B. 支持应用组件级的跨端迁移和多端协同",
+                "C. 支持多设备和多窗口形态",
+                "D. 平衡应用能力和系统管控成本"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "Stage模型中多个应用组件共享同一个ArkTS引擎，减少复杂应用的运行对内存的占用，并且采用面向对象的开发方式，使得复杂应用代码可读性高、易维护性好、可拓展性强。Stage模型支持组件间的RPC调用能力，并且实现了Ability分离，结合ArkUI的声明式特点，天然支持跨设备应用组件的交互。Stage模型实现了应用组件管理和窗口管理在架构层面的解耦，便于系统对应用组件进行裁剪以及拓展窗口形态。Stage模型为卡片服务、输入法服务提供了特定的应用组件，以满足更多的使用场景，并且Stage模型会对后台应用进程进行有序治理，防止恶意应用行为。"
+            },
+            {
+              "id": 3,
+              "question": "开发态的应用程序结构包含多种文件类型，以下说法正确的有：",
+              "options": [
+                "A. 配置文件，包括应用级配置信息app.json5、以及Module级配置信息module.json5",
+                "B. ArkTS源码文件，主要存放在Module_name > src > main > ets目录下",
+                "C. 资源文件，包括应用级资源文件、以及Module级资源文件，支持图形、多媒体、字符串、布局文件等",
+                "D. 其他配置文件，用于编译构建，包括构建配置文件、编译构建任务脚本、混淆规则文件、依赖的共享包信息等"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "包括应用级配置信息app.json5、以及Module级配置信息module.json5。ArkTS源码文件：Module_name > src > main > ets：用于存放Module的ArkTS源码文件（.ets文件）。资源文件：包括应用级资源文件、以及Module级资源文件，支持图形、多媒体、字符串、布局文件等。其他配置文件：用于编译构建，包括构建配置文件、编译构建任务脚本、混淆规则文件、依赖的共享包信息等。例如：build-profile.json5、hvigorfile.ts、oh-package.json5等。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+        "chapterName": "《从简单的页面开始》",
+        "questionTypes": [
+          {
+            "typeName": "判断题",
+            "questions": [
+              {
+                "id": 1,
+                "question": "Button作为容器使用时可以通过添加子组件实现包含文字、图片等元素的按钮，其类型包括胶囊按钮、圆形按钮、普通按钮。",
+                "options": [],
+                "correctAnswer": true,
+                "knowledge": "Button。解析：Button是按钮组件，通常用于响应用户的点击操作，其类型包括胶囊按钮、圆形按钮、普通按钮。Button做为容器使用时可以通过添加子组件实现包含文字、图片等元素的按钮。"
+              },
+              {
+                "id": 2,
+                "question": "Resource是资源引用类型，用于设置组件属性的值，可以定义组件的颜色、文本大小、组件大小等属性。",
+                "options": [],
+                "correctAnswer": true,
+                "knowledge": "Resource、资源引用。解析：Resource作为资源引用类型，核心作用是为组件属性提供值支持，可用于定义组件的颜色、文本大小、组件大小等各类属性。"
+              },
+              {
+                "id": 3,
+                "question": "在Column容器中的子组件默认是按照从上到下的垂直方向布局的，其主轴的方向是垂直方向，在Row容器中的组件默认是按照从左到右的水平方向布局的，其主轴的方向是水平方向。",
+                "options": [],
+                "correctAnswer": true,
+                "knowledge": "线性布局、Column容器、Row容器。解析：线性布局的子元素在线性方向上依次排列，Column容器内子元素按照垂直方向排列，主轴为垂直方向；Row容器内子元素按照水平方向排列，主轴为水平方向。"
+              }
+            ]
+          },
+          {
+            "typeName": "单选题",
+            "questions": [
+              {
+                "id": 1,
+                "question": "关于ForEach循环渲染的描述错误的是：",
+                "options": [
+                  "A. arr数据源，为Array类型的数组。",
+                  "B. itemGenerator为子组件生成函数，为数组中的每个元素创建对应的组件。",
+                  "C. keyGenerator为数组项唯一键值生成函数，为数据源arr的每个数组项生成唯一且持久的键值，函数返回值为开发者自定义的键值生成规则。",
+                  "D. ForEach基于数组类型数据来进行循环渲染，需要与容器组件配合使用，且可以返回任意子组件。"
+                ],
+                "correctAnswer": "D",
+                "knowledge": "ForEach循环渲染。解析：ForEach接口基于数组类型数据来进行循环渲染，需要与容器组件配合使用，且接口返回的组件应当是允许包含在ForEach父容器组件中的子组件，并非任意子组件。"
+              },
+              {
+                "id": 2,
+                "question": "Image不支持哪种图片格式：",
+                "options": [
+                  "A. svg",
+                  "B. eps",
+                  "C. gif",
+                  "D. bmp"
+                ],
+                "correctAnswer": "B",
+                "knowledge": "Image。解析：Image组件支持png、jpg、jpeg、bmp、svg、webp、gif和heif类型的图片格式，不支持eps格式。"
+              },
+              {
+                "id": 3,
+                "question": "下面哪个组件层次结构是错误的：",
+                "options": [
+                  "A. List>ListItem>Column",
+                  "B. Column>List>ListItem",
+                  "C. Grid>Row>GridItem",
+                  "D. Grid>GridItem"
+                ],
+                "correctAnswer": "C",
+                "knowledge": "List、Column、Grid。解析：“GridItem”组件具有强父容器约束，只能直接嵌套在Grid父组件中，无法嵌套在Row等其他组件内，因此Grid>Row>GridItem的层次结构错误。"
+              },
+              {
+                "id": 4,
+                "question": "需要在主轴上使第一个元素到行首的距离和最后一个元素到行尾的距离是相邻元素之间距离的一半，通过下列哪种方式设置：",
+                "options": [
+                  "A. justifyContent(FlexAlign.SpaceBetween)",
+                  "B. justifyContent(FlexAlign.SpaceAround)",
+                  "C. justifyContent(FlexAlign.SpaceEvenly)",
+                  "D. justifyContent(FlexAlign.Center)"
+                ],
+                "correctAnswer": "B",
+                "knowledge": "FlexAlign。解析：FlexAlign.SpaceBetween表示主轴上元素两端对齐，相邻元素间距相等；FlexAlign.SpaceAround表示主轴上第一个元素到行首、最后一个元素到行尾的距离是相邻元素间距的一半；FlexAlign.SpaceEvenly表示主轴上所有间距（包括元素到边界和相邻元素间）均相等；FlexAlign.Center表示主轴上元素居中对齐。"
+              }
+            ]
+          },
+          {
+            "typeName": "多选题",
+            "questions": [
+              {
+                "id": 1,
+                "question": "关于ImageFit的类型和说明正确的是：",
+                "options": [
+                  "A. Contain：保持宽高比进行缩小或者放大，使得图片完全显示在显示边界内。",
+                  "B. None：保持原有尺寸显示。",
+                  "C. Fill：不保持宽高比进行放大缩小，使得图片充满显示边界。",
+                  "D. Scale：保持宽高比显示，图片缩小或者保持不变。",
+                  "E. Cover：保持宽高比进行缩小或者放大，使得图片两边都大于或等于显示边界。"
+                ],
+                "correctAnswer": ["A", "B", "C", "E"],
+                "knowledge": "ImageFit。解析：ImageFit各类型说明如下：Contain（A正确）保持宽高比缩放，使图片完全显示在边界内；None（B正确）保持图片原有尺寸显示；Fill（C正确）不保持宽高比缩放，使图片充满边界；Cover（E正确）保持宽高比缩放，使图片两边均大于或等于边界；选项D错误，因“保持宽高比显示，图片缩小或者保持不变”对应的类型是ScaleDown，非Scale。"
+              },
+              {
+                "id": 2,
+                "question": "Row容器的主轴是水平方向，交叉轴是垂直方向，其参数类型为VerticalAlign （垂直对齐），VerticalAlign 定义了以下几种类型？",
+                "options": [
+                  "A. Top",
+                  "B. Bottom",
+                  "C. Start",
+                  "D. End",
+                  "E. Center"
+                ],
+                "correctAnswer": ["A", "B", "E"],
+                "knowledge": "Row容器、VerticalAlign。解析：VerticalAlign是Row容器交叉轴（垂直方向）的对齐方式枚举类型，仅定义三种类型：Top（A正确，顶部对齐）、Center（E正确，居中对齐）、Bottom（B正确，底部对齐）；Start和End并非VerticalAlign的类型，故C、D错误。"
+              },
+              {
+                "id": 3,
+                "question": "TextDecorationType不包含哪几种类型？",
+                "options": [
+                  "A. None",
+                  "B. LineThrough",
+                  "C. TopLine",
+                  "D. Bottomline"
+                ],
+                "correctAnswer": ["C", "D"],
+                "knowledge": "TextDecorationType、Text。解析：TextDecorationType是用于定义文本装饰线的枚举类型，包含的类型为None（A，无装饰线）、Overline（上划线）、LineThrough（B，删除线）、Underline（下划线）；TopLine（C）和Bottomline（D）并非该类型包含的内容，故为不包含的类型。"
+              }
+            ]
+          }
+        ]
+      },
+    {
+      "chapterName": "《构建更加丰富的页面》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "Tabs组件可以通过接口传入一个TabsController，该TabsController可以控制Tabs组件进行页签切换。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "TabsController的作用。解析：TabsController作为Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一个TabsController控制多个Tabs组件。"
+            },
+            {
+              "id": 2,
+              "question": "通过listDirection属性，可以设置List组件的排列方向，设置为Axis.Horizontal时，方向为纵向，为Axis.Vertical时，方向为横向。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "List组件排列方向的设置。解析：Axis.Vertical方向为纵向，Axis.Horizontal方向为横向。"
+            },
+            {
+              "id": 3,
+              "question": "Navigation组件是路由导航的根视图容器，一般作为Page页面的根容器使用，可以通过该组件提供的路由能力实现首页与非首页的切换。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "Navigation的基本概念。解析：Navigation组件是路由导航的根视图容器，一般作为Page页面的根容器使用，其内部默认包含了标题栏、内容区和工具栏，其中内容区默认首页显示导航内容（Navigation的子组件）或非首页显示（NavDestination的子组件），首页和非首页通过路由进行切换。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "Grid组件内，如何设置GridItem在水平方向上，后一列是前一列宽度的2倍？",
+              "options": [
+                "A. rowsTemplate('1fr 2fr 4fr 8fr')",
+                "B. rowsTemplate('8fr 4fr 2fr 1fr')",
+                "C. columnsTemplate ('1fr 2fr 4fr 8fr')",
+                "D. columnsTemplate ('8fr 4fr 2fr 1fr')"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "Grid子组件行列数量占比的设置。解析：columnsTemplate的值为'1fr 1fr 1fr 1fr'时，表示这个网格为4列，将Grid允许的宽分为4等分，每列占1份。 当值为'1fr 2fr 4fr 8fr'，表示这个网格为4列，第一列占1份，第二列占2份，第三列占4份，第四列占8份。"
+            },
+            {
+              "id": 2,
+              "question": "Tabs组件如何设置导航栏为左侧边导航：",
+              "options": [
+                "A. 设置BarPosition参数为BarPosition.End，vertical属性保持默认设置或设置为false。",
+                "B. 设置BarPosition参数为BarPosition.Start，vertical属性保持默认设置或设置为false。",
+                "C. 设置BarPosition参数为BarPosition.End，同时设置vertical属性为true。",
+                "D. 设置BarPosition参数为BarPosition.Start，同时设置vertical属性为true。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "TabBar位置和排列方向的设置。解析：Tabs组件的导航栏位置可以进行设置，具体对应关系如下：底部导航：barPosition参数设置为BarPosition.End，vertical属性不设置或设置为false。顶部导航：barPosition参数设置为BarPosition.Start，vertical属性不设置或设置为false。左侧边导航： barPosition参数设置为BarPosition.Start，vertical属性设置为true。右侧边导航：barPosition参数设置为BarPosition.End，vertical属性设置为true。"
+            },
+            {
+              "id": 3,
+              "question": "以下关于页面跳转相关方法说法不正确的是：",
+              "options": [
+                "A. pushPathByName方法可以将参数对应的页面栈信息进行入栈，从而完成对应页面的跳转。",
+                "B. pushPathByName方法需要依次传入页面名称，路由参数以及是否开启转场动画，其中转场动画默认开启。",
+                "C. replacePathByName方法会将页面栈栈顶元素退出，再将传入参数对应的页面栈信息进行入栈。",
+                "D. replacePathByName方法需要传入一个NavPathInfo类型的对象，该对象包含了NavDestination页面的信息。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "Navigation页面跳转方法。解析：pushPathByName方法能将该方法所传递的参数对应的页面栈信息进行入栈，然后显示入栈后的页面，从而完成对应的页面跳转，该方法需要依次传递页面名称、页面跳转参数以及是否开启转场动画等数据，其中转场动画默认开启。replacePathByName方法会将当前页面栈栈顶元素退出，再将传入参数对应的页面栈信息进行入栈，传入参数与pushPathByName类似，需要依次传递页面名称、页面跳转参数等数据，而并不需要传递一个NavPathInfo类型的对象。"
+            },
+            {
+              "id": 4,
+              "question": "下面哪个组件层次结构是错误的？",
+              "options": [
+                "A. List>ListItem>Column",
+                "B. Column>List>ListItem",
+                "C. Grid>Row>GridItem",
+                "D. Grid>GridItem"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "组件层次结构。解析：正确的层次结构应为Row>Grid>GridItem。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下属于Navigation布局模式的有：",
+              "options": [
+                "A. 自适应模式",
+                "B. 单页面模式",
+                "C. 层叠模式",
+                "D. 分栏模式"
+              ],
+              "correctAnswer": ["A", "B", "D"],
+              "knowledge": "Navigation布局模式。解析：通过调整Navigation组件的mode属性能够设置页面的显示模式，该属性有三个取值：1.NavigationMode.Stack。单页面模式，在该模式下，首页与非首页均以单个页面的形式进行展示，效果上类似于页面跳转。2.NavigationMode.Split。分栏模式，在该模式下，首页与非首页呈左右分栏布局。3.NavigationMode.Auto。自适应模式，在该模式下当设备宽度大于520vp时，Navigation组件采用分栏模式，反之采用单页面模式。这也是Navigation组件天然支持一多的原因。"
+            },
+            {
+              "id": 2,
+              "question": "关于Swiper组件的相关描述正确的是：",
+              "options": [
+                "A. 当loop为true时，在显示第一页或最后一页时，可以继续往前切换到前一页或者往后切换到后一页。如果loop为false，则在第一页或最后一页时，无法继续向前或者向后切换页面。",
+                "B. Swiper通过设置autoPlay属性，控制是否自动轮播子组件。",
+                "C. Swiper支持水平和垂直方向上进行轮播，主要通过vertical属性控制。",
+                "D. Swiper支持手指滑动、点击导航点和通过控制器三种方式切换页面。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "Swiper组件的概念和使用。解析：循环播放： 通过loop属性控制是否循环播放，该属性默认值为true。 当loop为true时，在显示第一页或最后一页时，可以继续往前切换到前一页或者往后切换到后一页。如果loop为false，则在第一页或最后一页时，无法继续向前或者向后切换页面。自动轮播：Swiper通过设置autoPlay属性，控制是否自动轮播子组件。该属性默认值为false。轮播方向：Swiper支持水平和垂直方向上进行轮播，主要通过vertical属性控制。页面切换方式：Swiper支持手指滑动、点击导航点和通过控制器三种方式切换页面。"
+            },
+            {
+              "id": 3,
+              "question": "关于Grid组件的相关描述正确的是：",
+              "options": [
+                "A. 网格布局是由“行”和“列”分割的单元格所组成，具有较强的页面均分能力，子组件占比控制能力。",
+                "B. Grid组件提供了rowsTemplate和columnsTemplate属性用于设置网格布局行列数量与尺寸占比。",
+                "C. 设置网格容器的步骤：准备待循环的数据源、设置网格容器Grid、利用ForEach对数据进行渲染。",
+                "D. 如果设置的是columnsTemplate，Grid的滚动方向为水平方向；如果设置的是rowsTemplate，Grid的滚动方向为垂直方向。",
+                "E. Grid用于设置网格布局相关参数，GridItem定义子组件相关特征。Grid组件支持使用条件渲染、循环渲染、懒加载等方式生成子组件。"
+              ],
+              "correctAnswer": ["A", "B", "C", "E"],
+              "knowledge": "Grid组件的概念和使用。解析：如果设置的是columnsTemplate，Grid的滚动方向为垂直方向；如果设置的是rowsTemplate，Grid的滚动方向为水平方向。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《从网络获取数据》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "订阅网络状态变化事件时，通过NetConnection类型的对象调用on方法，传入具体事件类型即可：",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "调用on方法之前需要先调用register接口，开启订阅。"
+            },
+            {
+              "id": 2,
+              "question": "若使用HTTP发起一个GET请求，直接调用get方法，传入请求资源的URL，即可发起请求：",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "使用HTTP发起请求时，需要调用request方法，并配置请求方式。"
+            },
+            {
+              "id": 3,
+              "question": "当RCP请求完毕时，须调用close方法主动销毁Session对象：",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "请求结束后须调用close方法，主动释放与此会话关联的资源。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "使用RCP发起请求时，可以调用Session类提供的方法。以下哪个不是Session类的对象可以调用的方法：",
+              "options": [
+                "A. get",
+                "B. post",
+                "C. put",
+                "D. request"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "使用HTTP发起请求时调用request方法。"
+            },
+            {
+              "id": 2,
+              "question": "使用RCP发起请求，客户端收到响应后，可以对其进行解析，处理响应结果。以下哪个是响应结果中包含的字段：",
+              "options": [
+                "A. request",
+                "B. statusCode",
+                "C. headers",
+                "D. 以上都是"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "远场通信服务的响应数据格式去学习"
+            },
+            {
+              "id": 3,
+              "question": "使用HTTP发起网络请求，需要以下哪种权限：",
+              "options": [
+                "A. ohos.permission.USE_BLUETOOTH",
+                "B. ohos.permission.INTERNET",
+                "C. ohos.permission.REQUIRE_FORM",
+                "D. ohos.permission.LOCATION"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "访问网络时，需要申请网络权限ohos.permission.INTERNET。"
+            },
+            {
+              "id": 4,
+              "question": "向服务器提交表单数据，以下哪种请求方式比较合适：",
+              "options": [
+                "A. RequestMethod.GET",
+                "B. RequestMethod.POST",
+                "C. RequestMethod.PUT",
+                "D. RequestMethod.DELETE"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "向服务器提交表单数据时，一般使用POST请求方式。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "当设备的网络状态从无网络到有网络时，会触发以下哪些事件：",
+              "options": [
+                "A. 网络可用事件（netAvailable）",
+                "B. 网络不可用事件（netUnavailable）",
+                "C. 网络能力变化事件（netCapabilitiesChange）",
+                "D. 网络连接信息变化事件（netConnectionPropertiesChange）"
+              ],
+              "correctAnswer": ["A", "C", "D"],
+              "knowledge": "设备从无网络到有网络会触发网络可用事件、网络能力变化事件和网络连接信息变化事件。网络不可用事件会在设备处于无网络状态或网络不可用时触发。"
+            },
+            {
+              "id": 2,
+              "question": "关于HTTP，以下描述正确的是：",
+              "options": [
+                "A. HTTP请求支持GET、POST、PUT等常用的请求方式",
+                "B. 调用request方法时，若不配置请求方式，默认发起POST请求",
+                "C. POST请求的参数可以在extraData中指定",
+                "D. 执行createHttp成功后，返回一个HttpRequest类型的对象，里面包括request、requestInStream、destroy、on和off方法"
+              ],
+              "correctAnswer": ["A", "C", "D"],
+              "knowledge": "调用request方法时，若不配置请求方式，默认发起GET请求。"
+            },
+            {
+              "id": 3,
+              "question": "关于RCP，以下描述正确的是：",
+              "options": [
+                "A. RCP提供自定义证书校验、忽略SSL校验等证书验证功能",
+                "B. RCP可以通过创建session实例来发送HTTP请求并管理其配置、取消和关闭的生命周期",
+                "C. 相较于HTTP，RCP提供更加便捷、场景化的API，简化了开发流程",
+                "D. RCP提供多种方式发起请求，调用相应的接口即可"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "远场通信服务去学习"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《保存应用数据》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "用户首选项是关系型数据库。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "用户首选项特点。解析：用户首选项的特点是：以Key-Value形式存储数据、非关系型数据库。"
+            },
+            {
+              "id": 2,
+              "question": "用户首选项Key可以是重复的关键字。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "用户首选项特点。解析：Key是不重复的关键字，Value是数据值。"
+            },
+            {
+              "id": 3,
+              "question": "相比用户首选项，关系型数据库可以实现数据加密等操作。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "用户首选项及关系型数据库特点。解析：用户首选项不支持数据加密，关系型数据库支持数据加密。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "用户首选项的数据持久化后是放在哪里？",
+              "options": [
+                "A. 内存中",
+                "B. 数据库表中",
+                "C. 文件中",
+                "D. 云端"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "用户首选项的运行机制。解析：通过flush方法把应用数据保存到持久化文件中。"
+            },
+            {
+              "id": 2,
+              "question": "下面哪个接口不是用户首选项提供的API接口？",
+              "options": [
+                "A. get()",
+                "B. update()",
+                "C. put()",
+                "D. flush()"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "用户首选项API。解析：常用接口有：保存数据（put）、获取数据（get）、是否包含指定的key（has）、删除数据（delete）、数据持久化（flush）等。"
+            },
+            {
+              "id": 3,
+              "question": "关于关系型数据库（Relational Database，RDB）说法错误的是",
+              "options": [
+                "A. 是一种基于关系模型来管理数据的数据库",
+                "B. 提供了用于执行Sql语句的方法",
+                "C. ArkTS侧支持的基本数据类型：number、string、二进制类型数据、boolean。",
+                "D. 不支持数据库事务处理。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "关系型数据库特点及API。解析：关系型数据库（Relational Database，RDB）是一种基于关系模型来管理数据的数据库。提供了excuteSql方法可以执行Sql语句。ArkTS侧支持的基本数据类型：number、string、二进制类型数据、boolean、支持事务处理。"
+            },
+            {
+              "id": 4,
+              "question": "关于关系型数据库模块提供的能力，说法错误的是",
+              "options": [
+                "A. RdbPredicates： 数据库中用来代表数据实体的性质、特征或者数据实体之间关系的词项，主要用来定义数据库的操作条件。",
+                "B. ResultSet：提供用户调用关系型数据库查询接口之后返回的结果集合。",
+                "C. RdbStore：提供管理关系数据库(RDB)方法的接口。",
+                "D. 关于数据库操作（如增删改查等），目前仅支持异步操作，并不提供同步方法。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "关系型数据库API。解析：提供了同步与异步的两种类型的接口。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于用户首选项的特点，下面说法正确的有？",
+              "options": [
+                "A. 用户首选项遵循ACID特性",
+                "B. 用户首选项以Key-Value形式存取数据",
+                "C. 用户首选项的Key是不重复的关键字",
+                "D. 用户首选项的key为String类型"
+              ],
+              "correctAnswer": ["B", "C", "D"],
+              "knowledge": "用户首选项特点。解析：区别于关系型数据库，用户首选项不保证遵循ACID（Atomicity, Consistency, Isolation and Durability）特性，数据之间无关系。"
+            },
+            {
+              "id": 2,
+              "question": "下面说法不正确的有？",
+              "options": [
+                "A. 用户首选项支持应用持久化轻量级数据",
+                "B. 用户首选项Key可以重复",
+                "C. 使用flush方法把数据保存到文件",
+                "D. 通过get方法未读取到key值，不能返回一个设置好的默认值"
+              ],
+              "correctAnswer": ["B", "D"],
+              "knowledge": "用户首选项特点及API。解析：Key是不重复的关键字，Value是数据值。get方法的参数有两个，第二个参数即设置好的默认值，在未查询到时，会将默认值返回。"
+            },
+            {
+              "id": 3,
+              "question": "以下关于关系型数据库的说法正确的是？",
+              "options": [
+                "A. 可以通过RdbPredicates设置数据库操作的谓词。",
+                "B. RdbStore提供用户调用关系型数据库查询接口之后返回的结果集合。",
+                "C. 通过getRdbStore获得一个相关的RdbStore，操作关系型数据库。",
+                "D. 数据库配置StoreConfig中不可以设置数据库安全级别。"
+              ],
+              "correctAnswer": ["A", "C"],
+              "knowledge": "关系型数据库API 解析：ResultSet：提供用户调用关系型数据库查询接口之后返回的结果集合。 数据库配置StoreConfig可以通过securityLevel设置数据库安全级别。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《应用程序框架进阶》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "一个应用是由一个或多个HAP组成。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "HAP是应用安装的基本单位，一个App就是由1个或多个HAP组成。"
+            },
+            {
+              "id": 2,
+              "question": "UIAbility组件多实例启动模式是默认的启动模式。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "单实例启动模式是默认的启动模式。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下关于指定实例启动模式说法正确的是？",
+              "options": [
+                "A. 系统每次启动UIAbility组件，都会创建一个新的该类型实例。",
+                "B. 是默认启动模式。",
+                "C. 支持拉起指定标识的实例。",
+                "D. 系统运行时，同一UIAbility组件只存在唯一实例。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "A是多实例启动模式的特点，B和D是单实例启动模式的特点。"
+            },
+            {
+              "id": 2,
+              "question": "以下关于Want的说法错误的是？",
+              "options": [
+                "A. Want是对象间信息传递的载体，用于在应用组件之间传递信息。",
+                "B. Want使用场景之一是作为startAbility()的参数。",
+                "C. 使用Want 启动UIAbility组件有显示Want启动和隐式Want启动两种形式。",
+                "D. Want不支持自定义参数。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "可以在Want的parameters参数中自定义参数，D错误。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "使用隐式Want启动UIAbility组件时，以下说法正确的是？",
+              "options": [
+                "A. 需要在创建的Want中设置“abilityName”字段。",
+                "B. 可以在创建的Want中设置想要启动的UIAbility组件的能力字段，如“entities”。",
+                "C. 想要在启动浏览器类型应用内时默认打开网页，可以在创建的Want中设置“uri”字段。",
+                "D. 在module.json5配置文件中，“skills”表示应用组件支持的能力。"
+              ],
+              "correctAnswer": ["B", "C", "D"],
+              "knowledge": "A错误，隐式Want启动UIAbility组件是指在创建Want时不指定UIAbility名，即不设置“abilityName”字段。B正确，可以指定启动的UIAbility组件的能力，如设置“entities”字段值为['entity.system.browsable']。C正确，设置“uri”字段后浏览器会打开该字段值对应的资源地址。D正确，在module.json5配置文件中，“skills”表示应用组件支持的能力。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《ArkUI进阶》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "ForEach提供了一个名为keyGenerator的参数，可以自定义键值的生成规则。如果没有定义keyGenerator函数，则ArkUI框架会使用默认的键值生成函数。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "ForEach中键值生成函数 分析：ForEach提供了一个名为keyGenerator的参数，这是一个函数，可以通过它自定义键值的生成规则。如果没有定义keyGenerator函数，则ArkUI框架会使用默认的键值生成函数。"
+            },
+            {
+              "id": 2,
+              "question": "在初始化渲染时，ForEach会加载数据源的所有数据。如果数据源非常大或有特定的性能需求，建议使用LazyForEach。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "ForEach、LazyForEach 分析：在初始化渲染时，ForEach会加载数据源的所有数据，并为每个数据项创建对应的组件，然后将其挂载到渲染树上。如果数据源非常大或有特定的性能需求，建议使用LazyForEach。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于组件复用，以下说法错误的是：",
+              "options": [
+                "A. 标记为@Reusable的组件从组件树上被移除时，组件和其对应的JSView对象都会被放入复用缓存中。",
+                "B. 当列表滑动新的ListItem将要被显示，List组件树上需要新建节点时，将会从复用缓存中查找可复用的组件节点。",
+                "C. 找到可复用节点并对其进行更新后添加到组件树中。从而节省了组件节点和JSView对象的创建时间。",
+                "D. 可以通过设置cachedCount来指定缓存数量实现组件复用。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "组件复用 分析：LazyForEach懒加载可以通过设置cachedCount来指定缓存数量，在设置cachedCount后，除屏幕内显示的ListItem组件外，还会预先将屏幕可视区外指定数量的列表项数据缓存。这个属于缓存列表项，不属于组件复用。"
+            },
+            {
+              "id": 2,
+              "question": "下列哪项属于精简节点数的方式来优化布局性能。",
+              "options": [
+                "A. 合理控制元素显示与隐藏",
+                "B. 给定组件的宽高",
+                "C. 移除冗余节点",
+                "D. 以上都不是"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "优化布局性能的优化 分析：精简节点数的优化方向有移除冗余节点和使用扁平化布局。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "针对长列表加载这一场景，可以采用哪些手段和方法来提升性能和用户体验：",
+              "options": [
+                "A. 懒加载：提供列表数据按需加载能力，解决一次性加载长列表数据耗时长、占用过多资源的问题，可以提升页面响应速度",
+                "B. 缓存列表项：提供屏幕可视区域外列表项长度的自定义调节能力，配合懒加载设置可缓存列表项参数，通过预加载数据提升列表滑动体验。",
+                "C. 组件复用：提供可复用组件对象的缓存资源池，通过重复使用已经创建过并缓存的组件对象，降低相同组件短时间内频繁创建和销毁的开销，提升组件渲染效率。",
+                "D. 布局优化：使用扁平化布局方案，减少视图嵌套层级和组件数，避免过度绘制，提升页面渲染效率。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "提升长列表加载时性能和用户体验的方法 分析：以上手段均可以提升长列表加载的性能和用户体验。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《合理使用动画与转场》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "ArkUI中提供了多种动画接口，包括属性动画、转场动画等，其中，属性动画是最基础的动画类型。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "属性动画是最基础的动画类型，按照动画参数逐帧驱动属性的变化，产生一帧帧的动画效果。"
+            },
+            {
+              "id": 2,
+              "question": "根据变化时是否能够添加动画，可以将属性分为可动画属性和不可动画属性，例如rotate属于可动画属性。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "属性接口（以下简称属性）包含尺寸属性、布局属性、位置属性等多种类型，用于控制组件的行为。针对当前界面上的组件，其部分属性（如位置属性）的变化会引起UI的变化。添加动画可以让属性值从起点逐渐变化到终点，从而产生连续的动画效果。根据变化时是否能够添加动画，可以将属性分为可动画属性和不可动画属性。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于属性动画的描述，不正确的是？",
+              "options": [
+                "A. ArkUI提供了animateTo和animation两种属性动画接口。",
+                "B. animateTo和animation都可以通过AnimateParam对象配置动画参数。",
+                "C. 可以把animateTo以属性的方式加在要做属性动画的组件上，通过改变可动画属性产生动画。",
+                "D. 弹簧曲线产生的运动轨迹更加符合用户认知，有助于创造自然生动的动画效果。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "ArkUI提供两种属性动画接口animateTo和animation驱动组件属性按照动画曲线等动画参数进行连续的变化，产生属性动画。 animateTo和animation都有相同的参数value，它指定了AnimateParam对象，包含了多个属性，比如：duration、tempo、curve、delay、iterations、playMode、onFinish等。 相比于animateTo接口需要把要执行动画的属性的修改放在闭包中，animation接口无需使用闭包，把animation接口加在要做属性动画的可动画属性后即可。animation只要检测到其绑定的可动画属性发生变化，就会自动添加属性动画，animateTo则必须在动画闭包内改变可动画属性的值从而生成动画。 相比于传统曲线，物理曲线产生的运动轨迹更加符合用户认知，有助于创造自然生动的动画效果，建议开发者优先使用物理曲线。"
+            },
+            {
+              "id": 2,
+              "question": "关于基础转场的TransitionEffect接口参数描述，正确的是？",
+              "options": [
+                "A. opacity可以用于设置组件转场时的透明度效果，参数类型为string。",
+                "B. translate用于设置组件转场时的旋转效果，参数类型为TranslateOptions。",
+                "C. combine具备对TransitionEffect进行链式组合的能力，以形成包含多种转场效果的TransitionEffect。",
+                "D. asymmetric可以指定非对称的转场效果。第一个参数指定消失的转场效果，第二个参数指定出现的转场效果。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "opacity可以用于设置组件转场时的透明度效果，参数类型为number。 translate用于设置组件转场时的平移效果，参数类型为TranslateOptions。 asymmetric可以指定非对称的转场效果。第一个参数指定出现的转场效果，第二个参数指定消失的转场效果。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于高级模板化转场，下列说法正确的有哪些？",
+              "options": [
+                "A. 主要应用于跨页面元素联动，多组件协同动画等场景。",
+                "B. 导航转场推荐使用Navigation组件实现，可搭配NavDestination组件实现导航功能。",
+                "C. 模态转场是一种界面切换时对相同或者相似的元素做的一种位置和大小匹配的过渡动画效果。",
+                "D. 对需要添加一镜到底动效的两个组件使用geometryTransition接口绑定同一id，可以实现共享元素转场。",
+                "E. 常见的模态接口包括全屏模态接口、半模态接口、绑定弹出式菜单、弹出菜单、气泡弹窗等。"
+              ],
+              "correctAnswer": ["A", "B", "D", "E"],
+              "knowledge": "共享元素转场是一种界面切换时对相同或者相似的元素做的一种位置和大小匹配的过渡动画效果。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《给应用添加交互》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "即时反馈（Toast）是一种临时性的消息提示框，用于向用户显示简短的操作反馈或状态信息。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "即时反馈（Toast）是一种临时性的消息提示框，用于向用户显示简短的操作反馈或状态信息。"
+            },
+            {
+              "id": 2,
+              "question": "单一手势是指由一个简单、独立的动作构成的手势。它是手势事件中最基础的形式，易于学习和使用，广泛应用于各种设备和场景中。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "单一手势是指由一个简单、独立的动作构成的手势。它是手势事件中最基础的形式，易于学习和使用，广泛应用于各种设备和场景中。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下关于日期滑动选择器弹窗showDatePickerDialog的API中属性描述错误的是？",
+              "options": [
+                "A. start属性用来指定选择器的起始日期。",
+                "B. end属性用来指定选择器的截止日期。",
+                "C. selected属性用来设置选中项的日期。",
+                "D. lunar属性用来设置是否展示切换农历的开关。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "lunar属性用来设置日期是否显示为农历。 lunarSwitch属性用来设置是否展示切换农历的开关。"
+            },
+            {
+              "id": 2,
+              "question": "下列选项描述错误的是?",
+              "options": [
+                "A. 列表选择器弹窗适用于呈现多个操作选项，尤其当界面中仅需展示操作列表而无其他内容时。",
+                "B. 选择器弹窗通常用于在用户进行某些操作（如点击按钮）时显示特定的信息或选项。",
+                "C. 操作菜单通常在用户执行特定操作（如长按或手势操作）时弹出，提供一系列与当前上下文相关的操作选项。",
+                "D. 即时反馈通常在屏幕的底部或顶部短暂弹出，会干扰用户当前的操作流程。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "即时反馈通常在屏幕的底部或顶部短暂弹出，随后在一段时间后自动消失。即时反馈的主要目的是提供简洁、不打扰的信息反馈，避免干扰用户当前的操作流程。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下关于组合手势GestureGroup(mode:GestureMode, gesture:GestureType[])API中描述正确的有哪些？",
+              "options": [
+                "A. 入参mode为GestureMode枚举类，用于声明该组合手势的类型。",
+                "B. 入参gesture是由多个手势组合而成的数组，用于声明组合成该组合手势的各个手势。",
+                "C. GestureMode枚举中Exclusive表示并发识别模式。",
+                "D. gesture数组中PinchGesture表示拖动手势。"
+              ],
+              "correctAnswer": ["A", "B"],
+              "knowledge": "GestureMode枚举中Exclusive表示互斥识别模式。 PinchGesture表示捏合手势。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《使用ArkWeb开发》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "Web组件提供具有网页显示能力，webview提供web控制能力。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "Web组件提供具有网页显示能力，@ohos.web.webview提供web控制能力。"
+            },
+            {
+              "id": 2,
+              "question": "通过webview 的WebviewController可以控制Web组件各种行为，包含控制web页面前进/后退、执行JavaScript代码、控制页面放大缩小等。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "通过webview 的WebviewController可以控制Web组件各种行为，包含控制web页面前进/后退、执行JavaScript代码、控制页面放大缩小等。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下列关于Web组件的属性，描述错误的是？",
+              "options": [
+                "A. fileAccess设置是否开启应用中文件系统的访问。",
+                "B. imageAccess设置是否允许自动加载图片资源，默认允许。",
+                "C. javaScriptAccess注入JavaScript对象到window对象中，并在window对象中调用该对象的方法。",
+                "D. zoomAccess设置是否支持手势缩放，默认允许执行缩放。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "javaScriptAccess表示是否允许执行JavaScript脚本，默认允许执行。"
+            },
+            {
+              "id": 2,
+              "question": "下列关于Webview，描述错误的是？",
+              "options": [
+                "A. 访问在线网页时需添加网络权限ohos.permission.INTERNET。",
+                "B. @ohos.web.webview提供web控制能力，web组件提供网页显示的能力。",
+                "C. onPageBegin、onPageEnd、onAppear是Web组件独有的生命周期事件。",
+                "D. WebviewController可以控制Web组件各种行为。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "onAppear是组件通用生命周期事件，onPageBegin、onPageEnd是Web组件独有的生命周期事件。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下列说法中，正确的是？",
+              "options": [
+                "A. 使用registerJavaScriptProxy()接口，需要和deleteJavaScriptRegister接口配合使用，防止内存泄漏。",
+                "B. 在registerJavaScriptProxy中，同步函数列表和异步函数列表不可同时为空，否则此次调用接口注册失败。",
+                "C. 在registerJavaScriptProxy中，如果同一方法在同步与异步列表中重复注册，将默认同步调用。",
+                "D. runJavaScript需要在loadUrl完成后，比如onPageEnd中调用。"
+              ],
+              "correctAnswer": ["A", "B", "D"],
+              "knowledge": "在registerJavaScriptProxy中，如果同一方法在同步与异步列表中重复注册，将默认异步调用。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《给应用添加通知》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "发布普通文本类型通知，需要设置ContentType类型为ContentType.NOTIFICATION_CONTENT_NORMAL_TEXT。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "发布普通文本类型通知，需要设置ContentType类型为ContentType.NOTIFICATION_CONTENT_BASIC_TEXT。"
+            },
+            {
+              "id": 2,
+              "question": "构造进度条模板通知，name字段当前需要固定配置为downloadTemplate。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "构造进度条模板，name字段当前需要固定配置为downloadTemplate。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "在发布进度类型通知前需要查询以下哪一点？",
+              "options": [
+                "A. 系统是否支持通知模板",
+                "B. 系统是否支持进度条模板",
+                "C. 系统是否支持文件下载",
+                "D. 系统是否设置通知通道"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "在发布进度类型通知前需要查询系统是否支持进度条模板。 notificationManager.isSupportTemplate('downloadTemplate').then(isSupport => { if (!isSupport) { promptAction.showToast({ message: $r('app.string.invalid_button_toast') }) } this.isSupport = isSupport; })"
+            },
+            {
+              "id": 2,
+              "question": "下面说法正确的是？",
+              "options": [
+                "A. 发布进度类型通知，需要设置ContentType类型为ContentType.NOTIFICATION_CONTENT_PICTURE。",
+                "B. 调用notificationManager.cancelall()取消所有已发布的通知。",
+                "C. 调用notificationManager.update来实现通知的更新。",
+                "D. 调用notificationManager.cancel需要传入通知ID。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "进度类型通知，设置contentType类型为ContentType.NOTIFICATION_CONTENT_BASIC_TEXT；调用notificationManager.cancelAll()取消所有已发布的通知；调用notificationManager.publish来实现通知的更新。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下面哪些方法可以移除通知？",
+              "options": [
+                "A. cancel",
+                "B. cancelAll",
+                "C. removeSlot",
+                "D. removeAllSlots"
+              ],
+              "correctAnswer": ["A", "B"],
+              "knowledge": "移除通知：通过通知ID和通知标签取消已发布的通知（notificationManager.cancel(notificationId)）；取消所有已发布的通知（notificationManager.cancelAll()）。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《访问和操作文件》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "应用沙箱路径是虚构的路径，与真实的物理路径无关。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "在应用沙箱路径下读写文件，经过映射转换，实际读写的是真实物理路径中的应用文件，应用沙箱路径与真实物理路径存在对应关系。"
+            },
+            {
+              "id": 2,
+              "question": "用户文件uri是文件的唯一标识，在对用户文件进行访问与修改等操作时往往都会使用到uri。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "用户文件URI是文件的唯一标识，在对用户文件进行访问与修改等操作时往往都会使用到URI。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下列关于应用文件的描述，说法错误的是？",
+              "options": [
+                "A. 应用文件所有者为应用，包括应用安装文件、应用资源文件、应用缓存文件等。",
+                "B. 应用沙箱是一种以安全防护为目的的隔离机制，避免数据受到恶意路径穿越访问。在这种沙箱的保护机制下，应用可见的目录范围即为“应用沙箱目录”。",
+                "C. 应用进程需要通过用户授权才能访问应用沙箱目录。",
+                "D. 在应用沙箱保护机制下，应用无法获知除自身应用文件目录之外的其他应用或用户的数据目录位置及存在。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "应用进程可以直接访问自身的应用沙箱目录，无需用户授权；只有访问用户文件（如相册、文档等）才需要用户授权。"
+            },
+            {
+              "id": 2,
+              "question": "下列关于用户文件的描述，说法错误的是？",
+              "options": [
+                "A. 用户文件为登录到该终端设备的用户所拥有的文件，包括用户私有的图片、视频、音频、文档等。",
+                "B. 用户文件存储位置主要分为内置存储、外置存储。",
+                "C. 应用对用户文件的创建、访问、删除等行为，需要提前获取用户授权，或由用户操作完成。",
+                "D. 通过Picker获取的uri，无法通过该uri对用户文件进行修改操作。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "通过Picker获取的URI默认具备临时读写权限，可以对用户文件进行修改操作，但该权限在应用退出后台后自动失效。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于HarmonyOS用户文件系统的特点，以下哪些描述是正确的？",
+              "options": [
+                "A. 提供统一的文件访问接口。",
+                "B. 支持多种文件存储类型。",
+                "C. 仅支持本地文件存储，不支持跨设备访问文件。",
+                "D. 具有良好的安全性和隐私保护机制。"
+              ],
+              "correctAnswer": ["A", "B", "D"],
+              "knowledge": "HarmonyOS用户文件系统支持统一访问接口、多种存储类型（如本地、分布式），并具备完善的安全与隐私保护机制；同时支持分布式文件系统，可实现跨设备文件访问。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《Native适配开发》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "当ArkTS侧在import一个so库时，ArkTS引擎会调用ModuleManager加载模块对应的so文件及其依赖。每次加载时都会触发模块的注册。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "当ArkTS侧在import一个so库时，只有首次调用会加载模块信息，触发模块注册。当工程被多次import时，是不会多次加载的。"
+            },
+            {
+              "id": 2,
+              "question": "导入使用的模块名和注册时的模块名大小写保持一致，如模块名为entry，则so的名字为libentry.so，napi_module中nm_modname字段应为entry，ArkTS侧使用时写作：import xxx from 'libentry.so'。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "导入使用的模块名和注册时的模块名大小写需要保持一致。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下有关线程安全的函数功能说明正确的是。",
+              "options": [
+                "A. napi_call_threadsafe_function：创建线程安全函数。",
+                "B. napi_release_threadsafe_function：指示线程安全函数可以开始使用。",
+                "C. napi_ref_threadsafe_function：指示在主线程上运行的事件循环在线程安全函数被销毁之前不应退出。",
+                "D. napi_acquire_threadsafe_function：调用线程安全函数。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "napi_call_threadsafe_function：调用线程安全函数。napi_release_threadsafe_function：指示线程安全函数将停止使用。napi_ref_threadsafe_function：指示在主线程上运行的事件循环在线程安全函数被销毁之前不应退出。napi_acquire_threadsafe_function：指示线程安全函数可以开始使用。"
+            },
+            {
+              "id": 2,
+              "question": "关于napi_create_async_work接口中注册的execute和complete回调，以下哪个说法是正确的。",
+              "options": [
+                "A. execute回调函数主要用于执行异步业务逻辑，代码运行在work子线程中",
+                "B. execute回调函数主要用于执行异步业务逻辑，代码运行在ArkTS主线程中",
+                "C. complete回调函数主要用于将execute回调函数的处理结果反馈给ArkTS应用侧，代码运行在work子线程上",
+                "D. complete回调函数主要用于执行异步业务逻辑，代码运行在EventLoop子线程上"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "napi_create_async_work接口中注册的execute回调用于执行异步业务逻辑，代码运行在work子线程中；complete回调用于将execute回调的处理结果反馈给ArkTS应用侧，代码运行在EventLoop子线程中。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于线程安全函数开发，以下哪些说法是正确的。",
+              "options": [
+                "A. 在创建线程安全函数对象时，要注册绑定ArkTS应用侧传入的callback回调和线程安全回调napi_threadsafe_function_call_js",
+                "B. 在Native接口实现中，会临时返回空值或者promise对象给ArkTS应用侧，以避免应用侧主线程阻塞",
+                "C. C++子线程将会执行异步业务逻辑，并将处理结果写入上下文数据中。同时，调用napi_call_threadsafe_function将napi_threadsafe_function_call_js抛给EventLoop事件循环",
+                "D. 在线程安全回调napi_threadsafe_function_call_js执行过程中，将会通过调用napi_call_function或者napi_resolve_deferred把异步处理结果反馈到ArkTS应用侧"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "（1）在创建线程安全函数对象时，要注册绑定ArkTS应用侧传入的callback回调和线程安全回调napi_threadsafe_function_call_js，二者不可同时为空。（2）在线程安全开发中，Native接口会临时返回空值或者promise对象给ArkTS应用侧，以避免应用侧主线程阻塞。（3）在线程安全开发中，C++子线程的执行函数将会执行异步业务逻辑。同时，将线程安全回调call_js_cb抛给EventLoop子线程，用以反馈结果到应用侧。（4）线程安全回调call_js_cb主要通过回调或者延时对象解析把异步处理结果反馈到应用侧。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《三方库的基本使用》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "可以通过ohpm uninstall 指令下载指定的三方库。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "下载指定三方库的指令是ohpm install，ohpm uninstall指令用于卸载指定三方库，因此该说法错误。"
+            },
+            {
+              "id": 2,
+              "question": "@ohos/lottie使用loadAnimation方法加载动画。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "@ohos/lottie（动画三方库）的核心加载动画方式是调用loadAnimation方法，因此该说法正确。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下面哪个API可以控制动画的播放？",
+              "options": [
+                "A. play()",
+                "B. pause()",
+                "C. stop()",
+                "D. destroy()"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "play() API的核心功能是控制动画启动播放；pause()用于暂停动画，stop()用于停止动画，destroy()用于销毁动画资源，因此能控制动画播放的是play()。"
+            },
+            {
+              "id": 2,
+              "question": "通过ohpm安装@ohos/lottie后，在哪个文件中会生成相关的配置信息？",
+              "options": [
+                "A. module.json5",
+                "B. oh-package.json5",
+                "C. app.json5",
+                "D. main_page.json"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "oh-package.json5是HarmonyOS项目中管理三方库依赖的配置文件，通过ohpm安装三方库（如@ohos/lottie）后，该文件会自动生成并记录三方库的版本等相关配置信息；module.json5用于配置模块信息，app.json5用于配置应用全局信息，main_page.json非标准配置文件，因此正确答案是oh-package.json5。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "下列哪些是加载动画API的配置项：",
+              "options": [
+                "A. container",
+                "B. renderer",
+                "C. path",
+                "D. autoplay"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "加载动画的核心API是loadAnimation，其关键配置项包括：container（指定动画渲染的上下文容器）、renderer（设置动画的渲染方式，如canvas等）、path（指定动画JSON文件的路径）、autoplay（设置动画是否自动播放）；此外还包括loop（是否循环播放）、initialSegment（指定播放的动画片段）等配置项，因此选项A、B、C、D均为其配置项。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《HarmonyOS SDK开放能力简介》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "HarmonyOS SDK是HarmonyOS面向应用和服务开发的开放能力合集。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "HarmonyOS SDK是HarmonyOS面向应用和服务开发的开放能力合集。"
+            },
+            {
+              "id": 2,
+              "question": "HarmonyOS SDK支持“1+8+N”全场景设备。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "HarmonyOS SDK支持“1+8+N”全场景设备。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下服务，哪个属于应用框架能力：",
+              "options": [
+                "A. Account Kit",
+                "B. Network Kit",
+                "C. ArkUI",
+                "D. Audio Kit"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "ArkUI属于应用框架，Account Kit属于应用服务，Network Kit属于系统能力，Audio Kit属于媒体能力。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "Harmony OS应用是能够在Harmony OS设备（例如，手机、平板等）上运行的应用程序，支持以下哪些形态：",
+              "options": [
+                "A. 需要下载安装的应用",
+                "B. 快应用",
+                "C. 轻量级，具备免安装，即用即走，服务直达，自由流转等关键特征的元服务",
+                "D. Web网站"
+              ],
+              "correctAnswer": ["A", "C"],
+              "knowledge": "Harmony OS应用是能够在Harmony OS设备（例如，手机、平板等）上运行的应用程序，支持两种形态：需要下载安装的应用；轻量级，具备免安装，即用即走，服务直达，自由流转等关键特征的元服务。"
+            },
+            {
+              "id": 2,
+              "question": "HarmonyOS SDK开放能力覆盖以下哪几种领域：",
+              "options": [
+                "A. 应用框架",
+                "B. 应用服务",
+                "C. 系统",
+                "D. 媒体",
+                "E. AI",
+                "F. 图形"
+              ],
+              "correctAnswer": ["A", "B", "C", "D", "E", "F"],
+              "knowledge": "HarmonyOS SDK开放能力覆盖应用框架、应用服务、系统、媒体、AI、图形六大领域。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《认识元服务》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "元服务可以通过邀请测试来向用户公开发布测试版本。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "HarmonyOS 支持通过 AppGallery Connect 的邀请测试功能，向指定用户发布元服务的测试版本。"
+            },
+            {
+              "id": 2,
+              "question": "通过AppGallery Connect发布元服务后，元服务将展示在负一屏或者服务中心，用户可在服务中心搜索获取元服务。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "元服务上架后会出现在华为设备的“服务中心”（负一屏）中，用户可通过搜索或推荐发现并使用。"
+            },
+            {
+              "id": 3,
+              "question": "元服务创建时，开发者可以按照应用包名规范来指定包名，包名格式如 com.companyName.projectName这样的倒域名的形式。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "元服务的包名由 AppGallery Connect 自动生成，开发者不能手动指定，不支持自定义倒域名格式。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于元服务API集描述正确的是",
+              "options": [
+                "A. 元服务API集是HarmonyOS SDK所开放的能力的真子集。",
+                "B. 应用开发不能使用元服务API集。",
+                "C. 元服务API集是独立开放的，元服务开发需要额外应用独立的SDK",
+                "D. 元服务API集包含ArkTS接口及C接口"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "元服务API集是 HarmonyOS SDK 开放能力的一个真子集，仅包含适用于轻量化、免安装场景的接口。"
+            },
+            {
+              "id": 2,
+              "question": "关于元服务“先注册后开发”描述正确的是。",
+              "options": [
+                "A. 不用注册为可开发者，也可以直接开发元服务。",
+                "B. 先注册是为了能够给元服务获取签名profile，因此可以直接复用应用的注册信息包括包名等。",
+                "C. 可以跳过该环节，直接采用社区的IDE及SDK开发，反正都能上架应用市场。",
+                "D. 开发者正式开发前需在开发者联盟上注册并创建元服务项目，系统会为该元服务颁发全局唯一的应用身份标识appid，在后续的开发、上架、运营等环节均使用该appid唯一标识此元服务"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "元服务需先在 AppGallery Connect 创建项目，获取全局唯一的 appid，用于开发、签名、上架等全流程。"
+            },
+            {
+              "id": 3,
+              "question": "关于元服务与应用的可复用性设计，描述不正确的是。",
+              "options": [
+                "A. 元服务对ArkUI的可访问API集合与应用比较接近，因此优先考虑UI代码与业务解耦，以实现最大化复用。",
+                "B. 在应用开发过程中，为满足业务需求，通过尽可能多地使用元服务API集中的API的方式，可以在将应用代码移植为元服务代码时，减少移植的工作量。",
+                "C. 元服务仅能使用元服务API集，超出元服务API集调用的模块将无法被打包成元服务，编译构建失败。",
+                "D. 应用不能使用元服务API集，因此元服务和应用尽量少的考虑可复用，避免增加成本。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "应用可以使用元服务API集中的所有接口（因为它是 SDK 的子集），因此应鼓励代码复用，D 说法错误。"
+            },
+            {
+              "id": 4,
+              "question": "元服务卡片描述正确的是。",
+              "options": [
+                "A. 元服务不能开发卡片，提供一个图标能够进入首页就可以了。",
+                "B. 元服务做好卡片就行了，落地页可以跳转到应用。",
+                "C. 元服务卡片做一个静态图就行，反正最终用户都是进入到落地页查看内容或者使用服务。",
+                "D. 元服务卡片是元服务内容外显的一种手段，充分根据用户需求，构建合理的内容显示和交互能力，能够极大方便用户对元服务的使用。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "元服务卡片是核心交互载体，应具备动态内容与交互能力，而非静态图或简单跳转。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下对于元服务的端到端开发过程，描述正确的是",
+              "options": [
+                "A. 元服务应先注册后开发，即建议开发者通过开发者联盟注册并获取到Appid后再开发元服务。",
+                "B. 元服务与应用使用同一个IDE开发，SDK也相同，只是元服务只能使用元服务API集中的API。",
+                "C. 元服务测试与应用一致，测试工具都是复用的。",
+                "D. 元服务在应用市场、负一屏及搜索等系统入口分发。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "元服务开发流程包括：先注册获取 appid、使用 DevEco Studio 和统一 SDK 开发、复用测试工具、通过服务中心/搜索等多入口分发。"
+            },
+            {
+              "id": 2,
+              "question": "以下对于元服务描述正确的是",
+              "options": [
+                "A. 元服务的应用名称下会标识“元服务”属性。",
+                "B. 元服务创建成功后会自动生成包名，可在应用列表或应用信息页面查看到。",
+                "C. 调试/发布证书为元服务配置签名信息的数字证书是由AGC颁发的。",
+                "D. 每个元服务包中必须包含一个Profile文件。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "元服务在 AGC 创建后自动生成包名和 appid；签名证书由 AGC 颁发；发布包必须包含 Profile 文件；在服务中心会标注“元服务”属性。"
+            },
+            {
+              "id": 3,
+              "question": "关于元服务与应用的异同，说明正确的是",
+              "options": [
+                "A. 与应用一样基于同一个SDK开发，运行在同一个系统底座上，有着相同的高端精致、隐私安全、极致流畅等鸿蒙特征的体验。",
+                "B. 元服务是一种轻量应用，具有秒开的特点，用户不需要下载安装即可快速打开元服务。",
+                "C. 元服务是基于web dsl开发的轻量应用，与应用开发技术栈不同。",
+                "D. 元服务有即用即走的特点，开发者应该提供更为高效的经营履约服务，让消费者获得更为方便快捷的体验。"
+              ],
+              "correctAnswer": ["A", "B", "D"],
+              "knowledge": "元服务与应用共享 SDK 和系统底座，使用 ArkTS + ArkUI 开发（非 Web DSL），具备免安装、秒开、即用即走等特性。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《质量建议与测试指南》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "兼容性测试是指测试长时间运行故障率（崩溃、冻屏等）、长时间运行内存资源异常等。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "兼容性测试是指测试应用与OS兼容、应用与设备兼容、应用升级兼容等。题干描述的是稳定性测试。"
+            },
+            {
+              "id": 2,
+              "question": "敏感个人信息是一旦泄露或者非法使用，容易导致自然人的人格尊严受到侵害或者人身、财产安全受到危害的个人信息，包括生物识别、宗教信仰、特定身份、医疗健康、金融账户、行踪轨迹等信息，以及不满十四周岁未成年人的个人信息。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "说法正确，属于安全测试中的测试标准。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "性能测试中关于时延的描述，以下说法错误的是：",
+              "options": [
+                "A. 应用内点击操作完成时延：测量从应用内点击操作开始到应用界面切换加载完成的耗时时延（毫秒）。",
+                "B. 界面连续丢帧数：测量应用启动过程、使用过程的屏幕界面连续丢帧卡顿（帧间隔）时长次数。",
+                "C. 应用内点击操作响应时延：测量从应用内点击操作开始到应用界面开始变化的第一帧的耗时（毫秒）。",
+                "D. 热启动完成时延：应用首次启动时间，即点击触发启动开始到应用启动加载完成的时间。"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "冷启动完成时延：应用首次启动时间，即点击触发启动开始到应用启动加载完成的时间。热启动完成时延：应用非首次启动时间，即打开应用，将应用置于后台后再次启动完成的时间。"
+            },
+            {
+              "id": 2,
+              "question": "关于稳定性测试，以下说法错误的是：",
+              "options": [
+                "A. 应用冻屏：指整个软件系统是正常的，某个应用出现屏幕卡住不动或一段时间内操作未及时响应的故障，也即用户俗称的应用死机、卡死、卡屏、无响应问题。",
+                "B. 应用崩溃：指在用户正常操作的情况下，某个应用突然出现闪退、异常停止运行等完全不可用的情况。",
+                "C. 踩内存：指在用户正常操作的情况下，应用对内存使用不当，导致有限的内存资源申请超上限或使用完未被释放。",
+                "D. 故障率：指单位时间内发生稳定性故障的次数，也称失效率，软件稳定性通常采用故障率来衡量。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "内存泄漏：指在用户正常操作的情况下，应用对内存使用不当，导致有限的内存资源申请超上限或使用完未被释放。踩内存：指在用户正常操作的情况下，程序指令非法访问内存地址，也称为内存越界。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于测试工具，以下说法正确的有：",
+              "options": [
+                "A. 单元测试框架(hypium)是HarmonyOS上的测试框架，提供测试用例编写、执行、结果显示能力，用于测试系统或应用接口。",
+                "B. UI测试框架是HarmonyOS应用界面测试框架，提供UI控件查找，点击，检视，按键注入等API并且支持跨设备测试。HarmonyOS应用开发者基于该测试框架可以编写和运行简洁可靠的UI自动化测试用例。",
+                "C. DevEco Testing是一款单机使用的专项测试工具，针对应用的开发和测试提供了相应的测试能力。DevEco Testing将测试能力以测试服务卡片形式的呈现给开发者和测试人员，可方便一键执行测试任务，并提供了测试报告和分析，辅助开发者和应用测试人员发现应用和产品问题，保障应用质量。",
+                "D. HarmonyOS应用云测平台，提供兼容性、安全、UX、性能、功耗、稳定性测试能力，支持流转、服务卡片等HarmonyOS关键特征自动化测试，支持华为1+8多设备运行，帮助开发者全方位看护APP基础质量。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "以上说法全部正确。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《应用/元服务上架》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "一个完整的发布软件包必须包含一个Profile文件。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "每个包中必须包含一个Profile文件，文件中包含了包名、数字证书信息、允许申请的证书权限列表等内容。"
+            },
+            {
+              "id": 2,
+              "question": "编译打包的软件包存放在项目目录build > outputs > default下。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "编译打包生成的软件包存放在build > outputs > default目录下。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "创建应用时，应用包名需要和在DevEco Studio中创建工程时哪个字段保持一致？",
+              "options": [
+                "A. package",
+                "B. name",
+                "C. bundleName",
+                "D. appName"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "在AppGallery Connect创建应用时，填写的包名需要和DevEco Studio中创建工程填写的bundleName一致。"
+            },
+            {
+              "id": 2,
+              "question": "上传发布软件包时，软件包的格式是什么？",
+              "options": [
+                "A. .zip",
+                "B. .app",
+                "C. .apk",
+                "D. .hap"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "打包出来的发布包是.app格式。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "在DevEco Studio配置签名信息时，需要上传哪些文件？",
+              "options": [
+                "A. 密钥库文件.p12文件",
+                "B. 签名文件.cer文件",
+                "C. Profile文件",
+                "D. 密钥证书.pem文件"
+              ],
+              "correctAnswer": ["A", "B", "C"],
+              "knowledge": "在DevEco Studio配置签名时，需要上传Store File（*.p12）、Profile File（*.p7b）和Certpath File（*.cer）。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《一次开发，多端部署》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "自适应布局元素可以根据特定的特征（如窗口宽度、屏幕方向）触发变化以适应外部容器的变化。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "自适应布局元素可根据相对关系自动变化以适应外部容器变化；响应式布局元素才会根据特定特征（如窗口宽度、屏幕方向）触发变化，二者功能混淆，故该说法错误。"
+            },
+            {
+              "id": 2,
+              "question": "响应式布局基于断点、栅格、媒体查询等能力实现，多用于解决页面各区域间的布局差异。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "响应式布局的核心实现能力包括断点、栅格、媒体查询，其主要用途是解决页面各区域间的布局差异；自适应布局多用于解决页面各区域内的布局差异，故该说法正确。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下哪个是系统资源的引用方式？",
+              "options": [
+                "A. 使用$r('sys.type.resource_id')",
+                "B. 使用$r('app.type.name')",
+                "C. 使用$sys('type.resource_id')",
+                "D. 使用$app('type.name')"
+              ],
+              "correctAnswer": "A",
+              "knowledge": "HarmonyOS中，系统预定义资源的引用格式为$r('sys.type.resource_id')；应用自定义资源的引用格式为$r('app.type.name')，选项C、D为错误格式，故正确答案为A。"
+            },
+            {
+              "id": 2,
+              "question": "Row父容器宽度100，其中子组件X设置了layoutWeight(3)和width('20%')，子组件Y设置了layoutWeight(2)和width('30%')，会出现什么样的效果？",
+              "options": [
+                "A. 子组件X宽度20，子组件Y宽度30",
+                "B. 子组件X宽度40，子组件Y宽度60",
+                "C. 子组件X宽度60，子组件Y宽度40",
+                "D. 子组件X宽度30，子组件Y宽度20"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "当组件同时设置width和layoutWeight时，layoutWeight优先级更高，width失效；父容器宽度按layoutWeight总和（3+2=5）比例分配，子组件X占比3/5×100=60，子组件Y占比2/5×100=40，故正确答案为C。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于自适应布局，以下说法正确的有：",
+              "options": [
+                "A. 拉伸能力是指容器组件尺寸发生变化时，增加或减小的空间全部分配给容器组件内指定区域",
+                "B. 占比能力是指子组件的宽高按照预设的比例，随父容器组件发生变化",
+                "C. 隐藏能力按照布局优先级大小，从大到小依次隐藏，直到容器能够完整显示剩余元素",
+                "D. 延伸能力是指容器组件内的子组件，按照其在列表中的先后顺序，随容器组件尺寸变化显示或隐藏"
+              ],
+              "correctAnswer": ["A", "B", "D"],
+              "knowledge": "自适应布局的隐藏能力需按布局优先级（displayPriority属性）从小到大依次隐藏，而非从大到小，具有相同优先级的元素同时显隐；A（拉伸能力）、B（占比能力）、D（延伸能力）描述均符合自适应布局特性，故正确答案为ABD。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《自由流转》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "应用流转时只需要申请权限ohos.permission.DISTRIBUTED_DATASYNC就好了，不需要再在用户运行时动态申请。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "DISTRIBUTED_DATASYNC作为user_grant类型的权限，除了要在配置文件中声明，还需要在运行时动态获得用户许可。"
+            },
+            {
+              "id": 2,
+              "question": "应用接续开发过程中，在onContinue中恢复待接续的业务数据，在同一UIAbility通过onCreate/onNewWant保存数据。",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "onContinue中用于保存待接续的业务数据，而在目标设备的同一UIAbility中通过onCreate/onNewWant恢复数据。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "使用支持默认流转的组件时配置的流转标识是？",
+              "options": [
+                "A. UnionID",
+                "B. resID",
+                "C. restoreId",
+                "D. openID"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "默认支持流转的组件需要配置restoreId，用于标识组件状态以便在目标设备上恢复。"
+            },
+            {
+              "id": 2,
+              "question": "跨端迁移应用开发过程中配置应用支持迁移的字段为？",
+              "options": [
+                "A. skills",
+                "B. deviceTypes",
+                "C. launchType",
+                "D. continuable"
+              ],
+              "correctAnswer": "D",
+              "knowledge": "在module.json5中，需将UIAbility的continuable字段设为true，以声明该Ability支持跨端迁移。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下哪些是自由流转体验",
+              "options": [
+                "A. 应用接续",
+                "B. 服务互通",
+                "C. 媒体播控",
+                "D. 跨设备拖拽",
+                "E. 跨设备剪切板"
+              ],
+              "correctAnswer": ["A", "B", "C", "D", "E"],
+              "knowledge": "自由流转的典型体验包括：应用接续、服务互通、媒体播控、跨设备拖拽、跨设备剪切板等。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《应用性能优化》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "在@Prop和@ObjectLink使用效果相同的场景下，优先使用@ObjectLink的方式减少系统内存开销。",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "@Prop是深拷贝，@ObjectLink是浅拷贝。因此在效果相同的场景下，使用@ObjectLink可以减少系统内存开销。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "cachedCount方法的默认缓存列表项数目为",
+              "options": [
+                "A. 0",
+                "B. 1",
+                "C. 2",
+                "D. 3"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "默认状态下，cachedCount设置的值为1，用于控制滚动容器中缓存的列表项数量。"
+            },
+            {
+              "id": 2,
+              "question": "关于ForEach和LazyForEach，下列说法错误的是？",
+              "options": [
+                "A. 当在滚动容器中使用了LazyForEach，框架会根据滚动容器可视区域按需创建组件，当组件滑出可视区域外时，框架会进行组件销毁回收以降低内存占用。",
+                "B. ForEach和LazyForEach会根据定义的键值生成规则为数据源的每个数组项生成唯一键值，并创建相应的组件。",
+                "C. LazyForEach进行非首次渲染时，它会检查新生成的键值是否在上次渲染中已经存在。如果键值不存在，则会创建一个新的组件；如果键值存在，则不会创建新的组件，而是直接渲染该键值所对应的组件。",
+                "D. 仅有List、Grid、Swiper以及WaterFlow组件支持LazyForEach的数据懒加载功能。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "该描述实际适用于 ForEach，而非 LazyForEach。LazyForEach 在数据变化时需通过 listener 通知更新，其复用机制依赖于底层懒加载容器的实现，并非简单通过键值比对决定是否创建组件。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下对应冷启动不同阶段的优化方法不正确的有",
+              "options": [
+                "A. 缩短应用进程创建&初始化阶段耗时：延迟加载",
+                "B. 缩短Application&Ability初始化阶段耗时：减少首页Ability或者Page中import的模块",
+                "C. 缩短Ability生命周期阶段耗时：使用异步加载",
+                "D. 缩短加载绘制首页阶段耗时：设置合适分辨率的startWindowIcon"
+              ],
+              "correctAnswer": ["A", "D"],
+              "knowledge": "A 和 D 的优化措施互换了。正确做法是：缩短应用进程创建&初始化阶段耗时应设置合适分辨率的 startWindowIcon；缩短加载绘制首页阶段耗时应采用延迟加载策略。"
+            },
+            {
+              "id": 2,
+              "question": "关于DevEco Profiler性能调优，下列说法正确的是：",
+              "options": [
+                "A. Launch：主要用于分析应用/服务的启动耗时，分析启动周期各阶段的耗时情况、核心线程的运行情况等，协助开发者识别启动瓶颈。",
+                "B. Frame：主要用于深度分析应用/服务的卡顿丢帧原因。",
+                "C. Time：主要用于改进函数执行效率的分析，深度录制函数调用栈及每帧耗时等相关运行数据，并完整展现ArkTS到Native的跨语言调用栈，支撑Native API典型问题分析。",
+                "D. Allocation：主要用于应用/服务内存资源占用情况的分析，可深度采集内存相关数据，直观呈现不同分类的内存趋势，提供内存实例分配的调用栈记录，深入分析内存问题。",
+                "E. Snapshot：支持多次拍摄ArkTS堆内存快照，分析单个内存快照或多个内存快照之间的差异，定位ArkTS的内存问题。",
+                "F. CPU：通过深度采集CPU内核相关数据，直观地呈现出当前选择调优应用/服务进程的CPU使用率、CPU各核心时间片调度信息、CPU各核心频率信息、CPU各核心使用率信息、系统各进程的CPU使用情况、线程状态及Trace信息等。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D", "E", "F"],
+              "knowledge": "以上选项全部正确，DevEco Profiler 提供了 Launch、Frame、Time、Allocation、Snapshot、CPU 等多种性能分析能力，覆盖启动、帧率、函数耗时、内存、CPU 等关键维度。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《应用开发安全》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "TEE是Trusted execution environment的缩写：",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "TEE可信执行环境是Trusted Execution Environment的缩写。"
+            },
+            {
+              "id": 2,
+              "question": "OS Kernel（操作系统内核）的安全性要强于TEE：",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "从可信计算基（TCB）角度看，安全性层级为：TCB → TEE → OS Kernel → User Process，安全性依次减弱，因此 TEE 的安全性高于 OS Kernel。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下哪个不是HarmonyOS安全设计理念要素？",
+              "options": [
+                "A. 机密性",
+                "B. 高效性",
+                "C. 完整性",
+                "D. 可用性"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "HarmonyOS安全设计理念基于信息安全三要素：机密性（Confidentiality）、完整性（Integrity）和可用性（Availability），不包括“高效性”。"
+            },
+            {
+              "id": 2,
+              "question": "下列哪个不是设备端侧证书",
+              "options": [
+                "A. 设备证书。",
+                "B. 业务证书。",
+                "C. CBG根证书。",
+                "D. CA证书。"
+              ],
+              "correctAnswer": "C",
+              "knowledge": "设备端侧证书包括：设备证书（用于标识设备身份）、业务证书（用于业务数据签名）、CA证书（用于验证对端证书合法性）。CBG根证书属于云端或证书颁发机构的根证书，不属于端侧证书。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "以下哪些是HarmonyOS生态安全的内容：",
+              "options": [
+                "A. 开发者实名。",
+                "B. 设备受限调试。",
+                "C. 上架检测与审核。",
+                "D. 应用代码签名与加密。",
+                "E. 应用运行时保护与检测。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D", "E"],
+              "knowledge": "HarmonyOS生态安全涵盖全生命周期：开发者实名认证、设备调试权限控制、应用上架前的安全检测与审核、代码签名与加密、以及运行时的保护与异常行为检测。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapterName": "《应用DFX能力介绍》",
+      "questionTypes": [
+        {
+          "typeName": "判断题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "HiAppEvent提供事件监听功能，开发者不能监听到系统事件：",
+              "options": [],
+              "correctAnswer": false,
+              "knowledge": "HiAppEvent提供事件监听功能，开发者不仅可以监听应用自定义事件，也可以监听系统事件。"
+            },
+            {
+              "id": 2,
+              "question": "HiTraceMeter用于追踪进程轨迹，进行程序性能分析，支持内核ftrace预置埋点和用户态打点：",
+              "options": [],
+              "correctAnswer": true,
+              "knowledge": "HiTraceMeter用于追踪进程轨迹，进行程序性能分析，支持内核ftrace预置埋点和用户态打点。"
+            }
+          ]
+        },
+        {
+          "typeName": "单选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "关于HiLog日志打印规则，下列说法错误的是：",
+              "options": [
+                "A. 日志中禁止打印设备关键器件信息。",
+                "B. 日志中可以打印用户个人隐私信息。",
+                "C. 日志输出级别必须符合实际情况，禁止胡乱使用日志级别。",
+                "D. 在业务关键流程应增加INFO等级日志。"
+              ],
+              "correctAnswer": "B",
+              "knowledge": "日志中严禁打印用户个人隐私信息，以保护用户数据安全与隐私合规。"
+            },
+            {
+              "id": 2,
+              "question": "下列哪一项不是HiLog定义的日志级别：",
+              "options": [
+                "A. DEBUG",
+                "B. INFO",
+                "C. WARN",
+                "D. ERROR",
+                "E. FAIL"
+              ],
+              "correctAnswer": "E",
+              "knowledge": "HiLog定义的日志级别包括：DEBUG、INFO、WARN、ERROR、FATAL，不包含FAIL。"
+            }
+          ]
+        },
+        {
+          "typeName": "多选题",
+          "questions": [
+            {
+              "id": 1,
+              "question": "DFX设计范围主要包含以下哪些：",
+              "options": [
+                "A. HiLog日志，基础流水日志打印。",
+                "B. HiAppEvent应用事件，事件埋点接口，提供事件的埋点写入。",
+                "C. HiTrace Meter跟踪，提供追踪进程轨迹，进行程序性能分析。",
+                "D. HiTrace Chain调用链，提供业务流程调用链跟踪的维测接口。"
+              ],
+              "correctAnswer": ["A", "B", "C", "D"],
+              "knowledge": "HarmonyOS DFX（Design for eXcellence）能力涵盖日志（HiLog）、事件（HiAppEvent）、性能追踪（HiTrace Meter）和调用链跟踪（HiTrace Chain）等核心维测组件。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
