@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmonyOS刷题系统</title>
+    <link rel="stylesheet" href="./css/harmonyos-questions.css">
+</head>
+<body>
+    <!-- 搜索功能 -->
+    <div class="search-container">
+        <h3>题目搜索</h3>
+        <input type="text" id="search-input" placeholder="输入关键词搜索题目...">
+        <button id="search-btn">搜索</button>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- 模式选择 -->
+    <div class="mode-select">
+        <h3>刷题模式</h3>
+        <button id="random-mode">随机刷题模式</button>
+        <button id="chapter-mode">按章节模式</button>
+    </div>
+
+    <!-- 章节选择（默认隐藏） -->
+    <div class="chapter-select">
+        <h3>选择章节</h3>
+        <select id="chapter-list"></select>
+        <button id="load-chapter">加载章节题目</button>
+    </div>
+
+    <!-- 题目区域 -->
+    <div class="question-area">
+        <h3 id="question-title">请选择刷题模式并加载题目</h3>
+        <div class="options" id="options-container"></div>
+        <button id="submit-answer" disabled>提交答案</button>
+    </div>
+
+    <!-- 结果与知识点区域 -->
+    <div class="result-area" id="result-container">
+        <div id="result-text"></div>
+        <div class="knowledge" id="knowledge-container"></div>
+    </div>
+
+    <!-- 下一题按钮 -->
+    <button id="next-question" disabled>下一题</button>
+
+    <!-- 下一章按钮 -->
+    <button id="next-chapter" disabled>下一章</button>
+
+    <script>
+        // 全局变量
+        let allQuestions = []; // 所有题目（随机模式用）
+        let currentQuestions = []; // 当前模式的题目列表
+        let currentIndex = 0; // 当前题目索引
+        let questionData = null; // 原始JSON数据
+        let currentChapterIndex = -1; // 当前章节索引
+
+        // 1. 加载JSON题库
+        fetch('harmonyos-questions.json')
+            .then(response => response.json())
+            .then(data => {
+                questionData = data;
+                initChapterSelect(); // 初始化章节下拉框
+                collectAllQuestions(); // 收集所有题目（随机模式用）
+            })
+            .catch(err => console.error('加载题库失败：', err));
+
+        // 2. 初始化章节下拉框
+        function initChapterSelect() {
+            const chapterSelect = document.getElementById('chapter-list');
+            questionData.chapters.forEach(chapter => {
+                const option = document.createElement('option');
+                option.value = chapter.chapterName;
+                option.textContent = chapter.chapterName;
+                chapterSelect.appendChild(option);
+            });
+        }
+
+        // 3. 收集所有题目（用于随机模式）
+        function collectAllQuestions() {
+            questionData.chapters.forEach(chapter => {
+                chapter.questionTypes.forEach(type => {
+                    type.questions.forEach(question => {
+                        // 给题目添加章节和题型标识（便于后续查看）
+                        allQuestions.push({
+                            ...question,
+                            chapterName: chapter.chapterName,
+                            typeName: type.typeName
+                        });
+                    });
+                });
+            });
+        }
+
+        // 4. 随机打乱数组（Fisher-Yates算法）
+        function shuffleArray(arr) {
+            const newArr = [...arr];
+            for (let i = newArr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+            }
+            return newArr;
+        }
+
+        // 5. 渲染当前题目
+        function renderCurrentQuestion() {
+            if (currentQuestions.length === 0) {
+                document.getElementById('question-title').textContent = '没有加载到题目，请重新选择模式';
+                return;
+            }
+
+            const currentQ = currentQuestions[currentIndex];
+            // 渲染题目标题
+            const title = `${currentQ.chapterName} - ${currentQ.typeName}（第${currentIndex + 1}/${currentQuestions.length}题）：${currentQ.question}`;
+            document.getElementById('question-title').textContent = title;
+
+            // 渲染选项
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            if (currentQ.typeName === '判断题') {
+                // 判断题添加正确/错误选项
+                const options = [
+                    { value: true, text: '正确(True)' },
+                    { value: false, text: '错误(False)' }
+                ];
+                options.forEach(option => {
+                    const item = createOptionItem(option.value, option.text, 'radio');
+                    optionsContainer.appendChild(item);
+                });
+            } else if (currentQ.typeName === '单选题') {
+                // 单选题渲染选项
+                currentQ.options.forEach(option => {
+                    const value = option.split('.')[0]; // 提取选项字母（A/B/C/D）
+                    const item = createOptionItem(value, option, 'radio');
+                    optionsContainer.appendChild(item);
+                });
+            } else if (currentQ.typeName === '多选题') {
+                // 多选题渲染选项
+                currentQ.options.forEach(option => {
+                    const value = option.split('.')[0]; // 提取选项字母（A/B/C/D）
+                    const item = createOptionItem(value, option, 'checkbox');
+                    optionsContainer.appendChild(item);
+                });
+            }
+
+            // 启用提交按钮，重置结果区域
+            document.getElementById('submit-answer').disabled = false;
+            document.getElementById('result-container').style.display = 'none';
+            document.getElementById('next-question').disabled = true;
+
+            // 设置下一章按钮状态
+            const nextChapterBtn = document.getElementById('next-chapter');
+            if (currentChapterIndex >= 0 && currentChapterIndex < questionData.chapters.length - 1) {
+                nextChapterBtn.disabled = false;
+            } else {
+                nextChapterBtn.disabled = true;
+            }
+        }
+
+        // 6. 创建选项元素（通用函数）
+        function createOptionItem(value, text, type) {
+            const div = document.createElement('div');
+            div.className = 'option-item';
+            
+            const input = document.createElement('input');
+            input.type = type;
+            input.name = 'answer';
+            input.value = value;
+            input.id = `option-${value}`;
+            
+            const label = document.createElement('label');
+            label.htmlFor = `option-${value}`;
+            label.textContent = text;
+            
+            div.appendChild(input);
+            div.appendChild(label);
+            return div;
+        }
+
+        // 7. 检查答案
+        function checkAnswer() {
+            const currentQ = currentQuestions[currentIndex];
+            const selectedValues = [];
+            const inputs = document.querySelectorAll('input[name="answer"]:checked');
+            
+            // 收集选中的答案
+            inputs.forEach(input => selectedValues.push(input.value));
+
+            // 处理不同题型的答案判断
+            let isCorrect = false;
+            let correctText = '';
+
+            if (currentQ.typeName === '判断题') {
+                const userAnswer = selectedValues[0] === 'true';
+                isCorrect = userAnswer === currentQ.correctAnswer;
+                correctText = currentQ.correctAnswer ? '正确(True)' : '错误(False)';
+            } else if (currentQ.typeName === '单选题') {
+                isCorrect = selectedValues[0] === currentQ.correctAnswer;
+                correctText = `正确答案：${currentQ.correctAnswer}`;
+            } else if (currentQ.typeName === '多选题') {
+                // 多选题比较数组（排序后）
+                const sortedUser = [...selectedValues].sort();
+                const sortedCorrect = [...currentQ.correctAnswer].sort();
+                isCorrect = JSON.stringify(sortedUser) === JSON.stringify(sortedCorrect);
+                correctText = `正确答案：${currentQ.correctAnswer.join(', ')}`;
+            }
+
+            // 显示结果
+            const resultText = document.getElementById('result-text');
+            const resultContainer = document.getElementById('result-container');
+            const knowledgeContainer = document.getElementById('knowledge-container');
+
+            resultContainer.style.display = 'block';
+            if (isCorrect) {
+                resultText.textContent = `回答正确！${correctText}`;
+                resultContainer.className = 'result-area correct';
+            } else {
+                resultText.textContent = `回答错误！${correctText}`;
+                resultContainer.className = 'result-area incorrect';
+            }
+
+            // 显示知识点
+            knowledgeContainer.innerHTML = `<strong>知识点：</strong>${currentQ.knowledge}`;
+
+            // 禁用提交按钮，启用下一题按钮
+            document.getElementById('submit-answer').disabled = true;
+            document.getElementById('next-question').disabled = currentIndex >= currentQuestions.length - 1;
+        }
+
+        // 8. 切换到下一题
+        function goToNextQuestion() {
+            if (currentIndex < currentQuestions.length - 1) {
+                currentIndex++;
+                renderCurrentQuestion();
+            } else {
+                alert('已完成当前模式下的所有题目！');
+                resetQuiz();
+            }
+        }
+
+        // 9. 重置刷题状态
+        function resetQuiz() {
+            currentIndex = 0;
+            currentQuestions = [];
+            document.getElementById('question-title').textContent = '请重新选择刷题模式并加载题目';
+            document.getElementById('options-container').innerHTML = '';
+            document.getElementById('submit-answer').disabled = true;
+            document.getElementById('next-question').disabled = true;
+            document.getElementById('result-container').style.display = 'none';
+        }
+
+        // 10. 搜索功能
+        function searchQuestions(keyword) {
+            if (!keyword) {
+                document.getElementById('search-results').style.display = 'none';
+                return;
+            }
+
+            const results = allQuestions.filter(q => 
+                q.question.toLowerCase().includes(keyword.toLowerCase()) ||
+                q.knowledge.toLowerCase().includes(keyword.toLowerCase()) ||
+                (q.options && q.options.some(option => option.toLowerCase().includes(keyword.toLowerCase())))
+            );
+
+            displaySearchResults(results, keyword);
+        }
+
+        // 11. 显示搜索结果（包含答案）
+        function displaySearchResults(results, keyword) {
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<div class="search-result-item">未找到相关题目</div>';
+                resultsContainer.style.display = 'block';
+                return;
+            }
+
+            results.slice(0, 10).forEach((q, index) => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+                
+                // 构造答案显示内容
+                let answerText = '';
+                if (q.typeName === '判断题') {
+                    answerText = `答案：${q.correctAnswer ? '正确' : '错误'}`;
+                } else if (q.typeName === '单选题') {
+                    answerText = `答案：${q.correctAnswer}`;
+                } else if (q.typeName === '多选题') {
+                    answerText = `答案：${q.correctAnswer.join(', ')}`;
+                }
+                
+                resultItem.innerHTML = `
+                    <div><strong>${highlightKeyword(q.chapterName, keyword)} - ${highlightKeyword(q.typeName, keyword)}</strong></div>
+                    <div>${highlightKeyword(q.question, keyword)}</div>
+                    <div class="search-result-answer">${highlightKeyword(answerText, keyword)}</div>
+                `;
+                
+                resultItem.addEventListener('click', () => {
+                    // 直接显示选中的题目
+                    showSingleQuestion(q);
+                    resultsContainer.style.display = 'none';
+                    document.getElementById('search-input').value = '';
+                });
+                resultsContainer.appendChild(resultItem);
+            });
+
+            resultsContainer.style.display = 'block';
+        }
+
+        // 12. 高亮搜索关键词
+        function highlightKeyword(text, keyword) {
+            if (!keyword) return text;
+            const escapedKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // 转义特殊字符
+            const regex = new RegExp('(' + escapedKeyword + ')', 'gi'); // 正确构造正则表达式
+            return text.replace(regex, '<span class="search-highlight">$1</span>');
+        }
+
+        // 13. 显示单个题目（用于搜索结果点击）- 显示正确答案,在渲染题目后自动选中正确答案
+        function showSingleQuestion(question) {
+            // 设置当前题目列表只包含这一题
+            currentQuestions = [question];
+            currentIndex = 0;
+            
+            // 渲染题目
+            renderCurrentQuestion();
+            
+            // 自动选中正确答案
+            setTimeout(() => {
+                if (question.typeName === '判断题') {
+                    const correctValue = question.correctAnswer.toString();
+                    const correctInput = document.querySelector(`input[value="${correctValue}"]`);
+                    if (correctInput) correctInput.checked = true;
+                } else if (question.typeName === '单选题') {
+                    const correctInput = document.querySelector(`input[value="${question.correctAnswer}"]`);
+                    if (correctInput) correctInput.checked = true;
+                } else if (question.typeName === '多选题') {
+                    question.correctAnswer.forEach(answer => {
+                        const correctInput = document.querySelector(`input[value="${answer}"]`);
+                        if (correctInput) correctInput.checked = true;
+                    });
+                }
+                
+                // 显示答案和知识点
+                const resultText = document.getElementById('result-text');
+                const resultContainer = document.getElementById('result-container');
+                const knowledgeContainer = document.getElementById('knowledge-container');
+                
+                // 构造正确答案文本
+                let correctText = '';
+                if (question.typeName === '判断题') {
+                    correctText = question.correctAnswer ? '正确(True)' : '错误(False)';
+                } else if (question.typeName === '单选题') {
+                    correctText = `正确答案：${question.correctAnswer}`;
+                } else if (question.typeName === '多选题') {
+                    correctText = `正确答案：${question.correctAnswer.join(', ')}`;
+                }
+                
+                // 显示结果
+                resultText.textContent = `${correctText}`;
+                resultContainer.className = 'result-area correct';
+                resultContainer.style.display = 'block';
+                
+                // 显示知识点
+                knowledgeContainer.innerHTML = `<strong>知识点：</strong>${question.knowledge}`;
+                
+                // 禁用提交按钮，启用下一题按钮
+                document.getElementById('submit-answer').disabled = true;
+                document.getElementById('next-question').disabled = true;
+            }, 100);
+        }
+
+        // 14. 事件监听：模式选择
+        document.getElementById('random-mode').addEventListener('click', () => {
+            // 隐藏章节选择，加载随机题目
+            document.querySelector('.chapter-select').style.display = 'none';
+            currentQuestions = shuffleArray(allQuestions);
+            currentIndex = 0;
+            renderCurrentQuestion();
+        });
+
+        document.getElementById('chapter-mode').addEventListener('click', () => {
+            // 显示章节选择，重置当前题目
+            document.querySelector('.chapter-select').style.display = 'block';
+            resetQuiz();
+        });
+
+        // 15. 事件监听：加载章节题目
+        document.getElementById('load-chapter').addEventListener('click', () => {
+            const selectedChapter = document.getElementById('chapter-list').value;
+            const chapter = questionData.chapters.find(c => c.chapterName === selectedChapter);
+            
+            // 收集当前章节的所有题目（按题型顺序）
+            currentQuestions = [];
+            chapter.questionTypes.forEach(type => {
+                type.questions.forEach(question => {
+                    currentQuestions.push({
+                        ...question,
+                        chapterName: chapter.chapterName,
+                        typeName: type.typeName
+                    });
+                });
+            });
+
+            currentIndex = 0;
+            renderCurrentQuestion();
+        });
+
+        // 16. 事件监听：提交答案、下一题、下一章
+        document.getElementById('submit-answer').addEventListener('click', checkAnswer);
+        document.getElementById('next-question').addEventListener('click', goToNextQuestion);
+        document.getElementById('next-chapter').addEventListener('click', () => {
+            if (currentChapterIndex >= 0 && currentChapterIndex < questionData.chapters.length - 1) {
+                currentChapterIndex++;
+                loadChapterByIndex(currentChapterIndex);
+            }
+        });
+
+        document.getElementById('chapter-mode').addEventListener('click', () => {
+            // 显示章节选择，重置当前题目
+            document.querySelector('.chapter-select').style.display = 'block';
+            resetQuiz();
+            currentChapterIndex = -1; // 重置章节索引
+            document.getElementById('next-chapter').disabled = true;
+        });
+
+        // 根据索引加载章节
+        function loadChapterByIndex(index) {
+            const chapter = questionData.chapters[index];
+            document.getElementById('chapter-list').value = chapter.chapterName;
+            
+            // 收集当前章节的所有题目
+            currentQuestions = [];
+            chapter.questionTypes.forEach(type => {
+                type.questions.forEach(question => {
+                    currentQuestions.push({
+                        ...question,
+                        chapterName: chapter.chapterName,
+                        typeName: type.typeName
+                    });
+                });
+            });
+
+            currentIndex = 0;
+            renderCurrentQuestion();
+        }
+
+        // 17. 事件监听：搜索功能
+        document.getElementById('search-btn').addEventListener('click', () => {
+            const keyword = document.getElementById('search-input').value.trim();
+            searchQuestions(keyword);
+        });
+
+        document.getElementById('search-input').addEventListener('input', () => {
+            const keyword = document.getElementById('search-input').value.trim();
+            if (keyword.length > 1) {
+                searchQuestions(keyword);
+            } else {
+                document.getElementById('search-results').style.display = 'none';
+            }
+        });
+
+        // 点击页面其他地方隐藏搜索结果
+        document.addEventListener('click', (event) => {
+            const searchContainer = document.querySelector('.search-container');
+            if (!searchContainer.contains(event.target)) {
+                document.getElementById('search-results').style.display = 'none';
+            }
+        });
+
+        // 事件监听：加载章节题目
+        document.getElementById('load-chapter').addEventListener('click', () => {
+            const selectedChapter = document.getElementById('chapter-list').value;
+            const chapter = questionData.chapters.find(c => c.chapterName === selectedChapter);
+            
+            // 设置当前章节索引
+            currentChapterIndex = questionData.chapters.findIndex(c => c.chapterName === selectedChapter);
+            
+            // 收集当前章节的所有题目（按题型顺序）
+            currentQuestions = [];
+            chapter.questionTypes.forEach(type => {
+                type.questions.forEach(question => {
+                    currentQuestions.push({
+                        ...question,
+                        chapterName: chapter.chapterName,
+                        typeName: type.typeName
+                    });
+                });
+            });
+
+            currentIndex = 0;
+            renderCurrentQuestion();
+        });
+    </script>
+</body>
+</html>
